@@ -1,0 +1,10 @@
+C:\Users\filip\OneDrive\Desktop\BYUI Semester\BYUI 8th Semester\CIT 365\Week03\MegaDesk\MegaDeskWindownsFilipe\MegaDeskWindownsFilipe\bin\Debug\MegaDeskWindownsFilipe.exe.config
+C:\Users\filip\OneDrive\Desktop\BYUI Semester\BYUI 8th Semester\CIT 365\Week03\MegaDesk\MegaDeskWindownsFilipe\MegaDeskWindownsFilipe\bin\Debug\MegaDeskWindownsFilipe.exe
+C:\Users\filip\OneDrive\Desktop\BYUI Semester\BYUI 8th Semester\CIT 365\Week03\MegaDesk\MegaDeskWindownsFilipe\MegaDeskWindownsFilipe\bin\Debug\MegaDeskWindownsFilipe.pdb
+C:\Users\filip\OneDrive\Desktop\BYUI Semester\BYUI 8th Semester\CIT 365\Week03\MegaDesk\MegaDeskWindownsFilipe\MegaDeskWindownsFilipe\obj\Debug\MegaDeskWindownsFilipe.csprojAssemblyReference.cache
+C:\Users\filip\OneDrive\Desktop\BYUI Semester\BYUI 8th Semester\CIT 365\Week03\MegaDesk\MegaDeskWindownsFilipe\MegaDeskWindownsFilipe\obj\Debug\MegaDeskWindownsFilipe.MainMenu.resources
+C:\Users\filip\OneDrive\Desktop\BYUI Semester\BYUI 8th Semester\CIT 365\Week03\MegaDesk\MegaDeskWindownsFilipe\MegaDeskWindownsFilipe\obj\Debug\MegaDeskWindownsFilipe.Properties.Resources.resources
+C:\Users\filip\OneDrive\Desktop\BYUI Semester\BYUI 8th Semester\CIT 365\Week03\MegaDesk\MegaDeskWindownsFilipe\MegaDeskWindownsFilipe\obj\Debug\MegaDeskWindownsFilipe.csproj.GenerateResource.cache
+C:\Users\filip\OneDrive\Desktop\BYUI Semester\BYUI 8th Semester\CIT 365\Week03\MegaDesk\MegaDeskWindownsFilipe\MegaDeskWindownsFilipe\obj\Debug\MegaDeskWindownsFilipe.csproj.CoreCompileInputs.cache
+C:\Users\filip\OneDrive\Desktop\BYUI Semester\BYUI 8th Semester\CIT 365\Week03\MegaDesk\MegaDeskWindownsFilipe\MegaDeskWindownsFilipe\obj\Debug\MegaDeskWindownsFilipe.exe
+C:\Users\filip\OneDrive\Desktop\BYUI Semester\BYUI 8th Semester\CIT 365\Week03\MegaDesk\MegaDeskWindownsFilipe\MegaDeskWindownsFilipe\obj\Debug\MegaDeskWindownsFilipe.pdb
