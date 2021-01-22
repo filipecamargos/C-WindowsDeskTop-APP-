@@ -8,3 +8,7 @@ C:\Users\filip\OneDrive\Desktop\BYUI Semester\BYUI 8th Semester\CIT 365\Week03\M
 C:\Users\filip\OneDrive\Desktop\BYUI Semester\BYUI 8th Semester\CIT 365\Week03\MegaDesk\MegaDeskWindownsFilipe\MegaDeskWindownsFilipe\obj\Debug\MegaDeskWindownsFilipe.csproj.CoreCompileInputs.cache
 C:\Users\filip\OneDrive\Desktop\BYUI Semester\BYUI 8th Semester\CIT 365\Week03\MegaDesk\MegaDeskWindownsFilipe\MegaDeskWindownsFilipe\obj\Debug\MegaDeskWindownsFilipe.exe
 C:\Users\filip\OneDrive\Desktop\BYUI Semester\BYUI 8th Semester\CIT 365\Week03\MegaDesk\MegaDeskWindownsFilipe\MegaDeskWindownsFilipe\obj\Debug\MegaDeskWindownsFilipe.pdb
+C:\Users\filip\OneDrive\Desktop\BYUI Semester\BYUI 8th Semester\CIT 365\Week03\MegaDesk\MegaDeskWindownsFilipe\MegaDeskWindownsFilipe\obj\Debug\MegaDeskWindownsFilipe.AddQuote.resources
+C:\Users\filip\OneDrive\Desktop\BYUI Semester\BYUI 8th Semester\CIT 365\Week03\MegaDesk\MegaDeskWindownsFilipe\MegaDeskWindownsFilipe\obj\Debug\MegaDeskWindownsFilipe.DisplayQuote.resources
+C:\Users\filip\OneDrive\Desktop\BYUI Semester\BYUI 8th Semester\CIT 365\Week03\MegaDesk\MegaDeskWindownsFilipe\MegaDeskWindownsFilipe\obj\Debug\MegaDeskWindownsFilipe.SearchQuotes.resources
+C:\Users\filip\OneDrive\Desktop\BYUI Semester\BYUI 8th Semester\CIT 365\Week03\MegaDesk\MegaDeskWindownsFilipe\MegaDeskWindownsFilipe\obj\Debug\MegaDeskWindownsFilipe.ViewAllQuotes.resources

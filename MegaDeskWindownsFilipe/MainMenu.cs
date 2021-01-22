@@ -22,9 +22,50 @@ namespace MegaDeskWindownsFilipe
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btnAddNewQuote_Click(object sender, EventArgs e)
         {
+            //Create a new fromAddQuotes object
+            var formAddQuote = new AddQuote();
 
+            //Pass a reference to this Main manu as a tag to the addQuoteform
+            formAddQuote.Tag = this;
+
+            //Display the add quote and hide the Main menu
+            formAddQuote.Show();
+            this.Hide();
+
+        }
+
+        private void btnViewAllQuotes_Click(object sender, EventArgs e)
+        {
+            //Create a new viewAllQuotes object
+            var viewAllQuotes = new ViewAllQuotes();
+
+            //Pass a reference to this Main manu as a tag to the viewAllQuotes
+            viewAllQuotes.Tag = this;
+
+            //Display the viewAllQuotes and hide the Main menu
+            viewAllQuotes.Show();
+            this.Hide();
+
+        }
+
+        private void btnSearchQuotes_Click(object sender, EventArgs e)
+        {
+            //Create a new searchQuotes object
+            var searchQuotes = new SearchQuotes();
+
+            //Pass a reference to this Main manu as a tag to the searchQuotes
+            searchQuotes.Tag = this;
+
+            //Display the searchQuotes and hide the Main menu
+            searchQuotes.Show();
+            this.Hide();
+        }
+
+        private void btn_exit(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

@@ -26,6 +26,17 @@ namespace MegaDeskWindownsFilipe
 
         public decimal GetQuotePrice()
         {
+            decimal area;
+            try
+            {
+                area = Desk.DeskArea();
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+
             //TO DO
             return 0;
         }

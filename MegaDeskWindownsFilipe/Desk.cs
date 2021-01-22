@@ -21,6 +21,12 @@ namespace MegaDeskWindownsFilipe
     /// </summary>
     public class Desk
     {
+        const decimal MAX_DEPTH = 48;
+        const decimal MIN_DEPTH = 12;
+
+        const decimal MAX_WIDTH = 96;
+        const decimal MIN_WIDTH = 24;
+
         public decimal Width { get; set; } 
 
         public decimal Depth { get; set; } 
@@ -30,7 +36,8 @@ namespace MegaDeskWindownsFilipe
         public SurfaceMaterial SurfaceMaterial { get; set; }
 
         public decimal DeskArea()
-        {
+        {   
+            //TO DO : IF the mesures are out of range an exeception will be sent
             return this.Width * this.Depth;
         }
     }

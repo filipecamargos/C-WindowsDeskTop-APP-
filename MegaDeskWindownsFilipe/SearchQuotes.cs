@@ -16,5 +16,16 @@ namespace MegaDeskWindownsFilipe
         {
             InitializeComponent();
         }
+
+        private void searchQuotes_FormClose(object sender, FormClosedEventArgs e)
+        {
+            var mainMenu = (MainMenu)this.Tag;
+            mainMenu.Show();
+        }
+
+        private void SearchQuotes_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
