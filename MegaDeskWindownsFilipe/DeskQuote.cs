@@ -18,7 +18,16 @@ namespace MegaDeskWindownsFilipe
     {
         public string CustomerName { get; set; }
 
-        public DateTime QuoteDate { get; set; }
+        public DateTime QuoteDate 
+        { 
+            get 
+            {
+                return new DateTime();
+            }
+            set
+            {
+            }
+        }
 
         public Shipping Shipping { get; set; }
 
@@ -40,7 +49,7 @@ namespace MegaDeskWindownsFilipe
                 Console.WriteLine(e.ToString());
             }
 
-            //TO DO
+            //Return the quote
             return basePrice + drawersPrice + getMaterialPrice() + getShippingPrice();
         }
 

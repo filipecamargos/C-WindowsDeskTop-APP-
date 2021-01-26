@@ -19,10 +19,14 @@ namespace MegaDeskWindownsFilipe
 
         private void displayQuote__FormClosed(object sender, FormClosedEventArgs e)
         {
-            var addQuote = (AddQuote)this.Tag;
+            var addQuote = new AddQuote();
             addQuote.Show();
         }
 
-
+        private void DisplayQuote_Load(object sender, EventArgs e)
+        {
+            var quote = (DeskQuote)this.Tag;
+            Console.WriteLine(quote.CustomerName);
+        }
     }
 }

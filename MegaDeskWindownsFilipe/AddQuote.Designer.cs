@@ -42,7 +42,7 @@ namespace MegaDeskWindownsFilipe
             this.drawers = new System.Windows.Forms.NumericUpDown();
             this.label7 = new System.Windows.Forms.Label();
             this.material = new System.Windows.Forms.ComboBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.delivery = new System.Windows.Forms.ComboBox();
             this.saveNewQuote = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.width)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.depth)).BeginInit();
@@ -208,18 +208,18 @@ namespace MegaDeskWindownsFilipe
             this.material.Size = new System.Drawing.Size(79, 21);
             this.material.TabIndex = 13;
             // 
-            // comboBox1
+            // delivery
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.delivery.FormattingEnabled = true;
+            this.delivery.Items.AddRange(new object[] {
             "NoRush",
             "Rush3Days",
             "Rush5Days",
             "Rush7Day"});
-            this.comboBox1.Location = new System.Drawing.Point(233, 205);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(79, 21);
-            this.comboBox1.TabIndex = 14;
+            this.delivery.Location = new System.Drawing.Point(233, 205);
+            this.delivery.Name = "delivery";
+            this.delivery.Size = new System.Drawing.Size(79, 21);
+            this.delivery.TabIndex = 14;
             // 
             // saveNewQuote
             // 
@@ -238,7 +238,7 @@ namespace MegaDeskWindownsFilipe
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(484, 361);
             this.Controls.Add(this.saveNewQuote);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.delivery);
             this.Controls.Add(this.material);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.drawers);
@@ -278,7 +278,7 @@ namespace MegaDeskWindownsFilipe
         private System.Windows.Forms.NumericUpDown drawers;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.ComboBox material;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox delivery;
         private System.Windows.Forms.Button saveNewQuote;
     }
 }

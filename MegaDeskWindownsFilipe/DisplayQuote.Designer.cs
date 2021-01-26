@@ -244,6 +244,7 @@ namespace MegaDeskWindownsFilipe
             this.Name = "DisplayQuote";
             this.Text = "Display Quote";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.displayQuote__FormClosed);
+            this.Load += new System.EventHandler(this.DisplayQuote_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
