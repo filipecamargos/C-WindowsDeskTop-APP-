@@ -31,10 +31,10 @@ namespace MegaDeskWindownsFilipe
             {
                 area = Desk.DeskArea();
             }
-            catch (Exception)
+            catch (Exception e)
             {
 
-                throw;
+                Console.WriteLine(e.ToString());
             }
 
             //TO DO

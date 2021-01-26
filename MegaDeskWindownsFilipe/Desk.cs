@@ -38,6 +38,11 @@ namespace MegaDeskWindownsFilipe
         public decimal DeskArea()
         {   
             //TO DO : IF the mesures are out of range an exeception will be sent
+            if (Width > MAX_WIDTH || Width < MIN_WIDTH || Depth > MAX_DEPTH 
+                || Depth < MIN_DEPTH)
+            {
+                throw new Exception("Mesure out of limits");
+            }
             return this.Width * this.Depth;
         }
     }
