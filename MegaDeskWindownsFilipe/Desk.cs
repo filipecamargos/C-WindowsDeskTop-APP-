@@ -27,23 +27,69 @@ namespace MegaDeskWindownsFilipe
         const decimal MAX_WIDTH = 96;
         const decimal MIN_WIDTH = 24;
 
-        public decimal Width { get; set; } 
+        private decimal width = MIN_WIDTH;
+        private decimal depth = MIN_DEPTH;
+        private decimal surfaceArea;
 
-        public decimal Depth { get; set; } 
+        public decimal Width
+        {
+            get { return width; }
+            set
+            {
+                // set width within constraints 
+                if (value < MIN_WIDTH)
+                {
+                    width = MIN_WIDTH;
+                }
+                else if (value > MAX_WIDTH)
+                {
+                    width = MAX_WIDTH;
+                }             
+                else
+                {
+                    width = value;
+                }
+                
+                // update surfaceArea every time width is set
+                surfaceArea = width * depth;
+            }
+        } 
+
+        public decimal Depth
+        {
+            get { return depth; }
+            set
+            {
+                // set depth within constraints 
+                if (value < MIN_DEPTH)
+                {
+                    depth = MIN_DEPTH;
+                }
+                else if (value > MAX_DEPTH)
+                {
+                    depth = MAX_DEPTH;
+                }
+                else
+                {
+                    depth = value;
+                }
+
+                // update surfaceArea every time width is set
+                surfaceArea = width * depth;
+            }
+        }
+
+        public decimal SurfaceArea
+        {
+            get { return surfaceArea; }
+            set
+            {
+                // might need something here
+            }
+        }
 
         public int NumberOfDrawers { get; set; }
         
         public SurfaceMaterial SurfaceMaterial { get; set; }
-
-        public decimal DeskArea()
-        {   
-           //Check fo the values to see if they are inside the determine
-            if (Width > MAX_WIDTH || Width < MIN_WIDTH || Depth > MAX_DEPTH 
-                || Depth < MIN_DEPTH)
-            {
-                throw new Exception("Mesure out of limits");
-            }
-            return this.Width * this.Depth;
-        }
     }
 }

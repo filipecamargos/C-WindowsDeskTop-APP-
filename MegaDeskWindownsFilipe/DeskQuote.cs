@@ -26,10 +26,13 @@ namespace MegaDeskWindownsFilipe
 
         public decimal GetQuotePrice()
         {
+            decimal basePrice = 200;
+            decimal drawersPrice = 50 * Desk.NumberOfDrawers;
+            
             decimal area;
             try
             {
-                area = Desk.DeskArea();
+                area = Desk.SurfaceArea;
             }
             catch (Exception e)
             {
@@ -38,19 +41,36 @@ namespace MegaDeskWindownsFilipe
             }
 
             //TO DO
-            return 0;
+            return basePrice + drawersPrice + getMaterialPrice() + getShippingPrice();
         }
 
         private decimal getMaterialPrice()
         {
-            return 0;
-
+            // Calculate price for large Desk
+            decimal extraCostPerSquare = Desk.SurfaceArea > 1000 ? Desk.SurfaceArea - 1000 : 0;
+            
+            // Calculate Surface material price
+            switch (Desk.SurfaceMaterial)
+            {
+                case SurfaceMaterial.Laminate:
+                    return 100 + extraCostPerSquare;
+                case SurfaceMaterial.Oak:
+                    return 200 + extraCostPerSquare;
+                case SurfaceMaterial.Rosewood:
+                    return 300 + extraCostPerSquare;
+                case SurfaceMaterial.Veneer:
+                    return 125 + extraCostPerSquare;
+                case SurfaceMaterial.Pine:
+                    return 50 + extraCostPerSquare;
+                default:
+                    return 0;
+            }
         }
 
         private decimal getShippingPrice()
         {
             //Desk are less than a 1000
-            if(Desk.DeskArea() < 1000)
+            if(Desk.SurfaceArea < 1000)
             {
                 switch (Shipping)
                 {
@@ -64,7 +84,7 @@ namespace MegaDeskWindownsFilipe
             }
 
             //Shipping area between 1000 and 2000
-            else if (Desk.DeskArea() >= 1000 && Desk.DeskArea() <= 2000)
+            else if (Desk.SurfaceArea >= 1000 && Desk.SurfaceArea <= 2000)
             {
                 switch (Shipping)
                 {
@@ -77,7 +97,7 @@ namespace MegaDeskWindownsFilipe
                 }
             }
             //Shipping area between 1000 and 2000
-            else if (Desk.DeskArea() > 2000)
+            else if (Desk.SurfaceArea > 2000)
             {
                 switch (Shipping)
                 {

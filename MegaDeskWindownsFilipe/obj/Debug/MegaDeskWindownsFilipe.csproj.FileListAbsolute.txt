@@ -12,3 +12,17 @@ C:\Users\filip\OneDrive\Desktop\BYUI Semester\BYUI 8th Semester\CIT 365\Week03\M
 C:\Users\filip\OneDrive\Desktop\BYUI Semester\BYUI 8th Semester\CIT 365\Week03\MegaDesk\MegaDeskWindownsFilipe\MegaDeskWindownsFilipe\obj\Debug\MegaDeskWindownsFilipe.DisplayQuote.resources
 C:\Users\filip\OneDrive\Desktop\BYUI Semester\BYUI 8th Semester\CIT 365\Week03\MegaDesk\MegaDeskWindownsFilipe\MegaDeskWindownsFilipe\obj\Debug\MegaDeskWindownsFilipe.SearchQuotes.resources
 C:\Users\filip\OneDrive\Desktop\BYUI Semester\BYUI 8th Semester\CIT 365\Week03\MegaDesk\MegaDeskWindownsFilipe\MegaDeskWindownsFilipe\obj\Debug\MegaDeskWindownsFilipe.ViewAllQuotes.resources
+D:\school\21-winter\net\MegaDeskv2\MegaDeskWindownsFilipe\bin\Debug\MegaDeskWindownsFilipe.exe.config
+D:\school\21-winter\net\MegaDeskv2\MegaDeskWindownsFilipe\bin\Debug\MegaDeskWindownsFilipe.exe
+D:\school\21-winter\net\MegaDeskv2\MegaDeskWindownsFilipe\bin\Debug\MegaDeskWindownsFilipe.pdb
+D:\school\21-winter\net\MegaDeskv2\MegaDeskWindownsFilipe\obj\Debug\MegaDeskWindownsFilipe.csprojAssemblyReference.cache
+D:\school\21-winter\net\MegaDeskv2\MegaDeskWindownsFilipe\obj\Debug\MegaDeskWindownsFilipe.AddQuote.resources
+D:\school\21-winter\net\MegaDeskv2\MegaDeskWindownsFilipe\obj\Debug\MegaDeskWindownsFilipe.DisplayQuote.resources
+D:\school\21-winter\net\MegaDeskv2\MegaDeskWindownsFilipe\obj\Debug\MegaDeskWindownsFilipe.MainMenu.resources
+D:\school\21-winter\net\MegaDeskv2\MegaDeskWindownsFilipe\obj\Debug\MegaDeskWindownsFilipe.Properties.Resources.resources
+D:\school\21-winter\net\MegaDeskv2\MegaDeskWindownsFilipe\obj\Debug\MegaDeskWindownsFilipe.SearchQuotes.resources
+D:\school\21-winter\net\MegaDeskv2\MegaDeskWindownsFilipe\obj\Debug\MegaDeskWindownsFilipe.ViewAllQuotes.resources
+D:\school\21-winter\net\MegaDeskv2\MegaDeskWindownsFilipe\obj\Debug\MegaDeskWindownsFilipe.csproj.GenerateResource.cache
+D:\school\21-winter\net\MegaDeskv2\MegaDeskWindownsFilipe\obj\Debug\MegaDeskWindownsFilipe.csproj.CoreCompileInputs.cache
+D:\school\21-winter\net\MegaDeskv2\MegaDeskWindownsFilipe\obj\Debug\MegaDeskWindownsFilipe.exe
+D:\school\21-winter\net\MegaDeskv2\MegaDeskWindownsFilipe\obj\Debug\MegaDeskWindownsFilipe.pdb
