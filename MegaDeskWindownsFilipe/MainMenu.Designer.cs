@@ -31,10 +31,10 @@ namespace MegaDeskWindownsFilipe
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainMenu));
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.exit = new System.Windows.Forms.Button();
-            this.searchQuotes = new System.Windows.Forms.Button();
-            this.viewAllQuotes = new System.Windows.Forms.Button();
-            this.addNewQuote = new System.Windows.Forms.Button();
+            this.btnExit = new System.Windows.Forms.Button();
+            this.btnSearchQuotes = new System.Windows.Forms.Button();
+            this.btnViewAllQuotes = new System.Windows.Forms.Button();
+            this.btnAddNewQuote = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -47,75 +47,79 @@ namespace MegaDeskWindownsFilipe
             this.pictureBox1.TabIndex = 4;
             this.pictureBox1.TabStop = false;
             // 
-            // exit
+            // btnExit
             // 
-            this.exit.BackColor = System.Drawing.Color.LightSteelBlue;
-            this.exit.FlatAppearance.BorderSize = 0;
-            this.exit.FlatAppearance.MouseDownBackColor = System.Drawing.Color.SlateGray;
-            this.exit.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSlateGray;
-            this.exit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.exit.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.exit.Location = new System.Drawing.Point(348, 295);
-            this.exit.Name = "exit";
-            this.exit.Size = new System.Drawing.Size(223, 60);
-            this.exit.TabIndex = 8;
-            this.exit.Text = "Exit";
-            this.exit.UseVisualStyleBackColor = false;
+            this.btnExit.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.btnExit.FlatAppearance.BorderSize = 0;
+            this.btnExit.FlatAppearance.MouseDownBackColor = System.Drawing.Color.SlateGray;
+            this.btnExit.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSlateGray;
+            this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnExit.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnExit.Location = new System.Drawing.Point(348, 295);
+            this.btnExit.Name = "btnExit";
+            this.btnExit.Size = new System.Drawing.Size(223, 60);
+            this.btnExit.TabIndex = 8;
+            this.btnExit.Text = "Exit";
+            this.btnExit.UseVisualStyleBackColor = false;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
-            // searchQuotes
+            // btnSearchQuotes
             // 
-            this.searchQuotes.BackColor = System.Drawing.Color.LightSteelBlue;
-            this.searchQuotes.FlatAppearance.BorderSize = 0;
-            this.searchQuotes.FlatAppearance.MouseDownBackColor = System.Drawing.Color.SlateGray;
-            this.searchQuotes.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSlateGray;
-            this.searchQuotes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.searchQuotes.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.searchQuotes.Location = new System.Drawing.Point(348, 205);
-            this.searchQuotes.Name = "searchQuotes";
-            this.searchQuotes.Size = new System.Drawing.Size(223, 60);
-            this.searchQuotes.TabIndex = 7;
-            this.searchQuotes.Text = "Search Quotes";
-            this.searchQuotes.UseVisualStyleBackColor = false;
+            this.btnSearchQuotes.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.btnSearchQuotes.FlatAppearance.BorderSize = 0;
+            this.btnSearchQuotes.FlatAppearance.MouseDownBackColor = System.Drawing.Color.SlateGray;
+            this.btnSearchQuotes.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSlateGray;
+            this.btnSearchQuotes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSearchQuotes.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSearchQuotes.Location = new System.Drawing.Point(348, 205);
+            this.btnSearchQuotes.Name = "btnSearchQuotes";
+            this.btnSearchQuotes.Size = new System.Drawing.Size(223, 60);
+            this.btnSearchQuotes.TabIndex = 7;
+            this.btnSearchQuotes.Text = "Search Quotes";
+            this.btnSearchQuotes.UseVisualStyleBackColor = false;
+            this.btnSearchQuotes.Click += new System.EventHandler(this.btnSearchQuotes_Click);
             // 
-            // viewAllQuotes
+            // btnViewAllQuotes
             // 
-            this.viewAllQuotes.BackColor = System.Drawing.Color.LightSteelBlue;
-            this.viewAllQuotes.FlatAppearance.BorderSize = 0;
-            this.viewAllQuotes.FlatAppearance.MouseDownBackColor = System.Drawing.Color.SlateGray;
-            this.viewAllQuotes.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSlateGray;
-            this.viewAllQuotes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.viewAllQuotes.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.viewAllQuotes.Location = new System.Drawing.Point(348, 115);
-            this.viewAllQuotes.Name = "viewAllQuotes";
-            this.viewAllQuotes.Size = new System.Drawing.Size(223, 60);
-            this.viewAllQuotes.TabIndex = 6;
-            this.viewAllQuotes.Text = "View Quotes";
-            this.viewAllQuotes.UseVisualStyleBackColor = false;
+            this.btnViewAllQuotes.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.btnViewAllQuotes.FlatAppearance.BorderSize = 0;
+            this.btnViewAllQuotes.FlatAppearance.MouseDownBackColor = System.Drawing.Color.SlateGray;
+            this.btnViewAllQuotes.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSlateGray;
+            this.btnViewAllQuotes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnViewAllQuotes.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnViewAllQuotes.Location = new System.Drawing.Point(348, 115);
+            this.btnViewAllQuotes.Name = "btnViewAllQuotes";
+            this.btnViewAllQuotes.Size = new System.Drawing.Size(223, 60);
+            this.btnViewAllQuotes.TabIndex = 6;
+            this.btnViewAllQuotes.Text = "View Quotes";
+            this.btnViewAllQuotes.UseVisualStyleBackColor = false;
+            this.btnViewAllQuotes.Click += new System.EventHandler(this.btnViewAllQuotes_Click);
             // 
-            // addNewQuote
+            // btnAddNewQuote
             // 
-            this.addNewQuote.BackColor = System.Drawing.Color.LightSteelBlue;
-            this.addNewQuote.FlatAppearance.BorderSize = 0;
-            this.addNewQuote.FlatAppearance.MouseDownBackColor = System.Drawing.Color.SlateGray;
-            this.addNewQuote.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSlateGray;
-            this.addNewQuote.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.addNewQuote.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.addNewQuote.Location = new System.Drawing.Point(348, 25);
-            this.addNewQuote.Name = "addNewQuote";
-            this.addNewQuote.Size = new System.Drawing.Size(223, 60);
-            this.addNewQuote.TabIndex = 5;
-            this.addNewQuote.Text = "Add New Quote";
-            this.addNewQuote.UseVisualStyleBackColor = false;
+            this.btnAddNewQuote.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.btnAddNewQuote.FlatAppearance.BorderSize = 0;
+            this.btnAddNewQuote.FlatAppearance.MouseDownBackColor = System.Drawing.Color.SlateGray;
+            this.btnAddNewQuote.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSlateGray;
+            this.btnAddNewQuote.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAddNewQuote.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddNewQuote.Location = new System.Drawing.Point(348, 25);
+            this.btnAddNewQuote.Name = "btnAddNewQuote";
+            this.btnAddNewQuote.Size = new System.Drawing.Size(223, 60);
+            this.btnAddNewQuote.TabIndex = 5;
+            this.btnAddNewQuote.Text = "Add New Quote";
+            this.btnAddNewQuote.UseVisualStyleBackColor = false;
+            this.btnAddNewQuote.Click += new System.EventHandler(this.btnAddNewQuote_Click);
             // 
             // MainMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(600, 411);
-            this.Controls.Add(this.exit);
-            this.Controls.Add(this.searchQuotes);
-            this.Controls.Add(this.viewAllQuotes);
-            this.Controls.Add(this.addNewQuote);
+            this.Controls.Add(this.btnExit);
+            this.Controls.Add(this.btnSearchQuotes);
+            this.Controls.Add(this.btnViewAllQuotes);
+            this.Controls.Add(this.btnAddNewQuote);
             this.Controls.Add(this.pictureBox1);
             this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(616, 450);
@@ -131,10 +135,10 @@ namespace MegaDeskWindownsFilipe
         #endregion
 
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Button exit;
-        private System.Windows.Forms.Button searchQuotes;
-        private System.Windows.Forms.Button viewAllQuotes;
-        private System.Windows.Forms.Button addNewQuote;
+        private System.Windows.Forms.Button btnExit;
+        private System.Windows.Forms.Button btnSearchQuotes;
+        private System.Windows.Forms.Button btnViewAllQuotes;
+        private System.Windows.Forms.Button btnAddNewQuote;
     }
 }
 

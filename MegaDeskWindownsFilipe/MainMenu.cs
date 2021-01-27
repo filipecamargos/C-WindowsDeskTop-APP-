@@ -43,7 +43,7 @@ namespace MegaDeskWindownsFilipe
             navigateToForm(searchQuotesForm);
         }
 
-        private void btn_exit(object sender, EventArgs e)
+        private void btnExit_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
