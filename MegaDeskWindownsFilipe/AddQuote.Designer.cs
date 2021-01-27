@@ -44,15 +44,19 @@ namespace MegaDeskWindownsFilipe
             this.material = new System.Windows.Forms.ComboBox();
             this.delivery = new System.Windows.Forms.ComboBox();
             this.saveNewQuote = new System.Windows.Forms.Button();
+            this.grpOrderDetails = new System.Windows.Forms.GroupBox();
+            this.grpDeskDetails = new System.Windows.Forms.GroupBox();
             ((System.ComponentModel.ISupportInitialize)(this.width)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.depth)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.drawers)).BeginInit();
+            this.grpOrderDetails.SuspendLayout();
+            this.grpDeskDetails.SuspendLayout();
             this.SuspendLayout();
             // 
             // closeAddQuote
             // 
             this.closeAddQuote.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.closeAddQuote.Location = new System.Drawing.Point(252, 274);
+            this.closeAddQuote.Location = new System.Drawing.Point(318, 285);
             this.closeAddQuote.Name = "closeAddQuote";
             this.closeAddQuote.Size = new System.Drawing.Size(150, 54);
             this.closeAddQuote.TabIndex = 1;
@@ -62,74 +66,79 @@ namespace MegaDeskWindownsFilipe
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(12, 50);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(9, 19);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(113, 17);
+            this.label1.Size = new System.Drawing.Size(101, 23);
             this.label1.TabIndex = 2;
             this.label1.Text = "Customer Name:";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // customerName
             // 
-            this.customerName.Location = new System.Drawing.Point(146, 47);
+            this.customerName.Location = new System.Drawing.Point(36, 45);
             this.customerName.Name = "customerName";
-            this.customerName.Size = new System.Drawing.Size(316, 20);
+            this.customerName.Size = new System.Drawing.Size(217, 20);
             this.customerName.TabIndex = 3;
             // 
             // label2
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(67, 131);
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(33, 25);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(48, 17);
+            this.label2.Size = new System.Drawing.Size(100, 23);
             this.label2.TabIndex = 4;
             this.label2.Text = "Width:";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // label3
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(65, 164);
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(33, 55);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(50, 17);
+            this.label3.Size = new System.Drawing.Size(100, 23);
             this.label3.TabIndex = 5;
             this.label3.Text = "Depth:";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // label4
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(249, 131);
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(6, 85);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(134, 17);
+            this.label4.Size = new System.Drawing.Size(127, 23);
             this.label4.TabIndex = 6;
             this.label4.Text = "Number of Drawers:";
+            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // label5
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(249, 164);
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(22, 117);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(115, 17);
+            this.label5.Size = new System.Drawing.Size(111, 23);
             this.label5.TabIndex = 7;
             this.label5.Text = "Surface Material:";
+            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // label6
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(159, 206);
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(9, 72);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(59, 17);
+            this.label6.Size = new System.Drawing.Size(104, 23);
             this.label6.TabIndex = 8;
-            this.label6.Text = "Delivery";
+            this.label6.Text = "Delivery:";
+            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
             // width
             // 
-            this.width.Location = new System.Drawing.Point(139, 131);
+            this.width.Location = new System.Drawing.Point(139, 28);
             this.width.Maximum = new decimal(new int[] {
             96,
             0,
@@ -141,17 +150,18 @@ namespace MegaDeskWindownsFilipe
             0,
             0});
             this.width.Name = "width";
-            this.width.Size = new System.Drawing.Size(79, 20);
+            this.width.Size = new System.Drawing.Size(120, 20);
             this.width.TabIndex = 9;
             this.width.Value = new decimal(new int[] {
             24,
             0,
             0,
             0});
+            this.width.ValueChanged += new System.EventHandler(this.width_ValueChanged);
             // 
             // depth
             // 
-            this.depth.Location = new System.Drawing.Point(139, 164);
+            this.depth.Location = new System.Drawing.Point(139, 58);
             this.depth.Maximum = new decimal(new int[] {
             48,
             0,
@@ -163,34 +173,36 @@ namespace MegaDeskWindownsFilipe
             0,
             0});
             this.depth.Name = "depth";
-            this.depth.Size = new System.Drawing.Size(79, 20);
+            this.depth.Size = new System.Drawing.Size(120, 20);
             this.depth.TabIndex = 10;
             this.depth.Value = new decimal(new int[] {
             12,
             0,
             0,
             0});
+            this.depth.ValueChanged += new System.EventHandler(this.depth_ValueChanged);
             // 
             // drawers
             // 
-            this.drawers.Location = new System.Drawing.Point(383, 131);
+            this.drawers.Location = new System.Drawing.Point(139, 88);
             this.drawers.Maximum = new decimal(new int[] {
             7,
             0,
             0,
             0});
             this.drawers.Name = "drawers";
-            this.drawers.Size = new System.Drawing.Size(79, 20);
+            this.drawers.Size = new System.Drawing.Size(120, 20);
             this.drawers.TabIndex = 11;
+            this.drawers.ValueChanged += new System.EventHandler(this.drawers_ValueChanged);
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Consolas", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Font = new System.Drawing.Font("Consolas", 23F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label7.Location = new System.Drawing.Point(193, 9);
+            this.label7.Location = new System.Drawing.Point(14, 9);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(109, 23);
+            this.label7.Size = new System.Drawing.Size(170, 37);
             this.label7.TabIndex = 12;
             this.label7.Text = "New Quote";
             // 
@@ -203,10 +215,11 @@ namespace MegaDeskWindownsFilipe
             "rosewood",
             "veneer",
             "pine"});
-            this.material.Location = new System.Drawing.Point(383, 162);
+            this.material.Location = new System.Drawing.Point(139, 118);
             this.material.Name = "material";
-            this.material.Size = new System.Drawing.Size(79, 21);
+            this.material.Size = new System.Drawing.Size(120, 21);
             this.material.TabIndex = 13;
+            this.material.SelectedIndexChanged += new System.EventHandler(this.material_SelectedIndexChanged);
             // 
             // delivery
             // 
@@ -216,15 +229,16 @@ namespace MegaDeskWindownsFilipe
             "Rush3Days",
             "Rush5Days",
             "Rush7Day"});
-            this.delivery.Location = new System.Drawing.Point(233, 205);
+            this.delivery.Location = new System.Drawing.Point(36, 98);
             this.delivery.Name = "delivery";
-            this.delivery.Size = new System.Drawing.Size(79, 21);
+            this.delivery.Size = new System.Drawing.Size(121, 21);
             this.delivery.TabIndex = 14;
+            this.delivery.SelectedIndexChanged += new System.EventHandler(this.delivery_SelectedIndexChanged);
             // 
             // saveNewQuote
             // 
             this.saveNewQuote.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.saveNewQuote.Location = new System.Drawing.Point(70, 274);
+            this.saveNewQuote.Location = new System.Drawing.Point(140, 285);
             this.saveNewQuote.Name = "saveNewQuote";
             this.saveNewQuote.Size = new System.Drawing.Size(150, 54);
             this.saveNewQuote.TabIndex = 15;
@@ -232,25 +246,45 @@ namespace MegaDeskWindownsFilipe
             this.saveNewQuote.UseVisualStyleBackColor = false;
             this.saveNewQuote.Click += new System.EventHandler(this.saveQuote);
             // 
+            // grpOrderDetails
+            // 
+            this.grpOrderDetails.Controls.Add(this.label1);
+            this.grpOrderDetails.Controls.Add(this.customerName);
+            this.grpOrderDetails.Controls.Add(this.delivery);
+            this.grpOrderDetails.Controls.Add(this.label6);
+            this.grpOrderDetails.Location = new System.Drawing.Point(20, 76);
+            this.grpOrderDetails.Name = "grpOrderDetails";
+            this.grpOrderDetails.Size = new System.Drawing.Size(270, 156);
+            this.grpOrderDetails.TabIndex = 16;
+            this.grpOrderDetails.TabStop = false;
+            this.grpOrderDetails.Text = "Order Details";
+            // 
+            // grpDeskDetails
+            // 
+            this.grpDeskDetails.Controls.Add(this.label4);
+            this.grpDeskDetails.Controls.Add(this.label2);
+            this.grpDeskDetails.Controls.Add(this.label3);
+            this.grpDeskDetails.Controls.Add(this.material);
+            this.grpDeskDetails.Controls.Add(this.label5);
+            this.grpDeskDetails.Controls.Add(this.width);
+            this.grpDeskDetails.Controls.Add(this.drawers);
+            this.grpDeskDetails.Controls.Add(this.depth);
+            this.grpDeskDetails.Location = new System.Drawing.Point(318, 76);
+            this.grpDeskDetails.Name = "grpDeskDetails";
+            this.grpDeskDetails.Size = new System.Drawing.Size(270, 156);
+            this.grpDeskDetails.TabIndex = 17;
+            this.grpDeskDetails.TabStop = false;
+            this.grpDeskDetails.Text = "Desk Details";
+            // 
             // AddQuote
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(600, 411);
+            this.Controls.Add(this.grpDeskDetails);
+            this.Controls.Add(this.grpOrderDetails);
             this.Controls.Add(this.saveNewQuote);
-            this.Controls.Add(this.delivery);
-            this.Controls.Add(this.material);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.drawers);
-            this.Controls.Add(this.depth);
-            this.Controls.Add(this.width);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.customerName);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.closeAddQuote);
             this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(616, 450);
@@ -262,6 +296,9 @@ namespace MegaDeskWindownsFilipe
             ((System.ComponentModel.ISupportInitialize)(this.width)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.depth)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.drawers)).EndInit();
+            this.grpOrderDetails.ResumeLayout(false);
+            this.grpOrderDetails.PerformLayout();
+            this.grpDeskDetails.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -283,5 +320,7 @@ namespace MegaDeskWindownsFilipe
         private System.Windows.Forms.ComboBox material;
         private System.Windows.Forms.ComboBox delivery;
         private System.Windows.Forms.Button saveNewQuote;
+        private System.Windows.Forms.GroupBox grpOrderDetails;
+        private System.Windows.Forms.GroupBox grpDeskDetails;
     }
 }
