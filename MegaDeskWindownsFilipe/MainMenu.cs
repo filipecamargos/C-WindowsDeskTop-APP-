@@ -18,7 +18,7 @@ namespace MegaDeskWindownsFilipe
         }
 
         private void openForm(Form form)
-        {
+        {            
             form.Tag = this;
             this.Hide();
             form.Show();
@@ -27,43 +27,20 @@ namespace MegaDeskWindownsFilipe
 
         private void btnAddNewQuote_Click(object sender, EventArgs e)
         {
-            //Create a new fromAddQuotes object
-            var formAddQuote = new AddQuote();
-
-            //Pass a reference to this Main menu as a tag to the addQuoteform
-            formAddQuote.Tag = this;
-
-            //Display the add quote and hide the Main menu
-            formAddQuote.Show();
-            this.Hide();
-
+            var addQuoteForm = new AddQuote();
+            openForm(addQuoteForm);
         }
 
         private void btnViewAllQuotes_Click(object sender, EventArgs e)
         {
-            //Create a new viewAllQuotes object
-            var viewAllQuotes = new ViewAllQuotes();
-
-            //Pass a reference to this Main manu as a tag to the viewAllQuotes
-            viewAllQuotes.Tag = this;
-
-            //Display the viewAllQuotes and hide the Main menu
-            viewAllQuotes.Show();
-            this.Hide();
-
+            var viewAllQuotesForm = new ViewAllQuotes();
+            openForm(viewAllQuotesForm);
         }
 
         private void btnSearchQuotes_Click(object sender, EventArgs e)
-        {
-            //Create a new searchQuotes object
-            var searchQuotes = new SearchQuotes();
-
-            //Pass a reference to this Main manu as a tag to the searchQuotes
-            searchQuotes.Tag = this;
-
-            //Display the searchQuotes and hide the Main menu
-            searchQuotes.Show();
-            this.Hide();
+        {          
+            var searchQuotesForm = new SearchQuotes();
+            openForm(searchQuotesForm);
         }
 
         private void btn_exit(object sender, EventArgs e)
