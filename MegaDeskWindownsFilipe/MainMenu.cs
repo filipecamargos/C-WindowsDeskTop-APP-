@@ -17,9 +17,12 @@ namespace MegaDeskWindownsFilipe
             InitializeComponent();
         }
 
-        private void MainMenu_Load(object sender, EventArgs e)
+        private void openForm(Form form)
         {
-
+            form.Tag = this;
+            this.Hide();
+            form.Show();
+            form.Location = this.Location;
         }
 
         private void btnAddNewQuote_Click(object sender, EventArgs e)
@@ -27,7 +30,7 @@ namespace MegaDeskWindownsFilipe
             //Create a new fromAddQuotes object
             var formAddQuote = new AddQuote();
 
-            //Pass a reference to this Main manu as a tag to the addQuoteform
+            //Pass a reference to this Main menu as a tag to the addQuoteform
             formAddQuote.Tag = this;
 
             //Display the add quote and hide the Main menu
