@@ -16,11 +16,18 @@ namespace MegaDeskWindownsFilipe
         {
             InitializeComponent();
         }
+        private void navigateToForm(Form form)
+        {
+            form.Tag = this;
+            this.Hide();
+            form.Show();
+            form.Location = this.Location;
+        }
 
         private void AddQuote_FormClosed(object sender, FormClosedEventArgs e)
         {
-            var mainMenu = new MainMenu();
-            mainMenu.Show();
+            var mainMenuForm = new MainMenu();
+            navigateToForm(mainMenuForm);
         }
 
         private void AddQuote_Load(object sender, EventArgs e)
@@ -30,7 +37,8 @@ namespace MegaDeskWindownsFilipe
 
         private void closeAddQuote_Click(object sender, EventArgs e)
         {
-            this.Close();
+            var mainMenuForm = new MainMenu();
+            navigateToForm(mainMenuForm);
         }
 
         private void saveQuote(object sender, EventArgs e)

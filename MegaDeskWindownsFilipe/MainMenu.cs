@@ -17,7 +17,7 @@ namespace MegaDeskWindownsFilipe
             InitializeComponent();
         }
 
-        private void openForm(Form form)
+        private void navigateToForm(Form form)
         {            
             form.Tag = this;
             this.Hide();
@@ -28,19 +28,19 @@ namespace MegaDeskWindownsFilipe
         private void btnAddNewQuote_Click(object sender, EventArgs e)
         {
             var addQuoteForm = new AddQuote();
-            openForm(addQuoteForm);
+            navigateToForm(addQuoteForm);
         }
 
         private void btnViewAllQuotes_Click(object sender, EventArgs e)
         {
             var viewAllQuotesForm = new ViewAllQuotes();
-            openForm(viewAllQuotesForm);
+            navigateToForm(viewAllQuotesForm);
         }
 
         private void btnSearchQuotes_Click(object sender, EventArgs e)
         {          
             var searchQuotesForm = new SearchQuotes();
-            openForm(searchQuotesForm);
+            navigateToForm(searchQuotesForm);
         }
 
         private void btn_exit(object sender, EventArgs e)
