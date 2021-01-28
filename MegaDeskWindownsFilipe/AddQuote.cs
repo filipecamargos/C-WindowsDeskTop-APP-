@@ -20,7 +20,7 @@ namespace MegaDeskWindownsFilipe
         }
 
         private void navigateToForm(Form form)
-        {
+        {           
             form.Tag = this;
             form.Location = this.Location;
             this.Hide();

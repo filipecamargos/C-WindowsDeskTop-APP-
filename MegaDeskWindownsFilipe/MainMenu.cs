@@ -20,8 +20,10 @@ namespace MegaDeskWindownsFilipe
         private void navigateToForm(Form form)
         {
             form.Tag = this;
+            form.Show(); // New forms need to be shown before their location
+            form.Hide(); // can be set.
             form.Location = this.Location;
-            this.Hide();
+            this.Hide();         
             form.Show();
         }
 
