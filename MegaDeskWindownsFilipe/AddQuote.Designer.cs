@@ -80,6 +80,7 @@ namespace MegaDeskWindownsFilipe
             this.customerName.Name = "customerName";
             this.customerName.Size = new System.Drawing.Size(217, 20);
             this.customerName.TabIndex = 0;
+            this.customerName.TextChanged += new System.EventHandler(this.customerName_TextChanged);
             // 
             // label2
             // 
@@ -228,6 +229,7 @@ namespace MegaDeskWindownsFilipe
             // saveNewQuote
             // 
             this.saveNewQuote.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.saveNewQuote.Enabled = false;
             this.saveNewQuote.Location = new System.Drawing.Point(140, 285);
             this.saveNewQuote.Name = "saveNewQuote";
             this.saveNewQuote.Size = new System.Drawing.Size(150, 54);
