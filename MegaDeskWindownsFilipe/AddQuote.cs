@@ -39,7 +39,6 @@ namespace MegaDeskWindownsFilipe
         {
             material.DataSource = Enum.GetValues(typeof(SurfaceMaterial));
             material.SelectedItem = SurfaceMaterial.Pine;
-            delivery.DataSource = Enum.GetValues(typeof(Shipping));
             delivery.SelectedItem = "14 day (no rush)";
         }
 
@@ -55,9 +54,12 @@ namespace MegaDeskWindownsFilipe
 
         private Desk getDeskFromInput()
         {
+            // get width, depth, and number of drawers from input
             decimal width = this.width.Value;
             decimal depth = this.depth.Value;
             int numberOfDrawers = (int)this.drawers.Value;
+
+            // get surface material from input and convert it to enum
             string surfaceMaterialStr = this.material.SelectedValue.ToString();
             SurfaceMaterial surfaceMaterial;
             surfaceMaterial = (SurfaceMaterial)Enum.Parse(typeof(SurfaceMaterial), surfaceMaterialStr);
@@ -67,11 +69,15 @@ namespace MegaDeskWindownsFilipe
 
         private DeskQuote getDeskQuoteFromInput()
         {
+            // get customer name and desk from input
             string customerName = this.customerName.Text;
+            Desk desk = getDeskFromInput();
+
+            // get shipping from input and convert to enum
             string shippingStr = this.delivery.SelectedItem.ToString();
             Shipping shipping;
             shipping = DeskQuote.shippingDict[shippingStr];
-            Desk desk = getDeskFromInput();
+                  
             DateTime date = DateTime.Today;
 
             return new DeskQuote(customerName, shipping, desk, date);
