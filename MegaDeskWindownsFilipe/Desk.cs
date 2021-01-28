@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace MegaDeskWindownsFilipe
 {
+    /// <summary>
+    /// Enumaration to provide the different materials
+    /// </summary>
     public enum SurfaceMaterial
     {
         Pine,
@@ -21,9 +24,9 @@ namespace MegaDeskWindownsFilipe
     /// </summary>
     public class Desk
     {
+        //Constants for the values determine by on the requirement for the desk
         const decimal MAX_DEPTH = 48;
         const decimal MIN_DEPTH = 12;
-
         const decimal MAX_WIDTH = 96;
         const decimal MIN_WIDTH = 24;
 
