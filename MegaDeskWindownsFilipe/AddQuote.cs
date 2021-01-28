@@ -95,9 +95,10 @@ namespace MegaDeskWindownsFilipe
             //Save the quote and move to the display of the quote passing the new info             
             navigateToDisplayQuote();
         }
-
+             
         private void customerName_TextChanged(object sender, EventArgs e)
         {
+            // Disable save quote button if no custome name has been entered
             if (customerName.Text != "")
             {
                 saveNewQuote.Enabled = true;
