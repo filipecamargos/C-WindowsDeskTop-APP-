@@ -18,29 +18,44 @@ namespace MegaDeskWindownsFilipe
         }
 
         private void navigateToForm(Form form)
-        {            
+        {
             form.Tag = this;
+            form.Location = this.Location;
             this.Hide();
             form.Show();
-            form.Location = this.Location;
         }
 
-        private void btnAddNewQuote_Click(object sender, EventArgs e)
+        private void navigateToAddQuote()
         {
             var addQuoteForm = new AddQuote();
             navigateToForm(addQuoteForm);
         }
 
-        private void btnViewAllQuotes_Click(object sender, EventArgs e)
+        private void navigateToViewAllQuotes()
         {
             var viewAllQuotesForm = new ViewAllQuotes();
             navigateToForm(viewAllQuotesForm);
         }
 
-        private void btnSearchQuotes_Click(object sender, EventArgs e)
-        {          
+        private void navigateToSearchQuotes()
+        {
             var searchQuotesForm = new SearchQuotes();
             navigateToForm(searchQuotesForm);
+        }
+
+        private void btnAddNewQuote_Click(object sender, EventArgs e)
+        {
+            navigateToAddQuote();
+        }
+
+        private void btnViewAllQuotes_Click(object sender, EventArgs e)
+        {
+            navigateToViewAllQuotes();
+        }
+
+        private void btnSearchQuotes_Click(object sender, EventArgs e)
+        {
+            navigateToSearchQuotes();
         }
 
         private void btnExit_Click(object sender, EventArgs e)
