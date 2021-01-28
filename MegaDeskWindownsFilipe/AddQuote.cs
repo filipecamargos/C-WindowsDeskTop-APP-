@@ -22,17 +22,21 @@ namespace MegaDeskWindownsFilipe
         private void navigateToForm(Form form)
         {
             form.Tag = this;
+            form.Location = this.Location;
             this.Hide();
             form.Show();
-            form.Location = this.Location;
         }
 
-        private void navigateBackToMainMenu()
+        private void navigateToDisplayQuote()
         {
-            var frmMainMenu = (MainMenu)this.Tag;
-            frmMainMenu.Location = this.Location;
-            this.Hide();
-            frmMainMenu.Show();
+            var displayQuoteForm = new DisplayQuote();
+            navigateToForm(displayQuoteForm);            
+        }
+
+        private void navigateToMainMenu()
+        {
+            var mainMenuForm = (MainMenu)this.Tag;
+            navigateToForm(mainMenuForm);
         }
 
         private void AddQuote_Load(object sender, EventArgs e)
@@ -44,12 +48,12 @@ namespace MegaDeskWindownsFilipe
 
         private void AddQuote_FormClosed(object sender, FormClosedEventArgs e)
         {         
-            navigateBackToMainMenu();
+            navigateToMainMenu();
         }
 
         private void closeAddQuote_Click(object sender, EventArgs e)
         {
-            navigateBackToMainMenu();
+            navigateToMainMenu();
         }
 
         private Desk getDeskFromInput()
@@ -88,9 +92,8 @@ namespace MegaDeskWindownsFilipe
             //Get all the information from the form inputs
             Quote = getDeskQuoteFromInput();
 
-            //Save the quote and move to the display of the quote passing the new info
-            var displayQuoteForm = new DisplayQuote();
-            navigateToForm(displayQuoteForm);
+            //Save the quote and move to the display of the quote passing the new info             
+            navigateToDisplayQuote();
         }
     }
 }
