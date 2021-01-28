@@ -12,9 +12,12 @@ namespace MegaDeskWindownsFilipe
 {
     public partial class DisplayQuote : Form
     {
-        public DisplayQuote()
+        private DeskQuote quote;
+
+        public DisplayQuote(DeskQuote quote)
         {
             InitializeComponent();
+            this.quote = quote;
         }
 
         private void displayQuote__FormClosed(object sender, FormClosedEventArgs e)
@@ -25,8 +28,7 @@ namespace MegaDeskWindownsFilipe
 
         private void DisplayQuote_Load(object sender, EventArgs e)
         {
-            var quote = (DeskQuote)this.Tag;
-            Console.WriteLine(quote.CustomerName);
+
         }
     }
 }
