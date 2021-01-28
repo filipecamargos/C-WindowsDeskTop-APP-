@@ -14,7 +14,7 @@ namespace MegaDeskWindownsFilipe
         Rush3Days      
     }
 
-    class DeskQuote
+    public class DeskQuote
     {
         public static Dictionary<string, Shipping> shippingDict
             = new Dictionary<string, Shipping> {

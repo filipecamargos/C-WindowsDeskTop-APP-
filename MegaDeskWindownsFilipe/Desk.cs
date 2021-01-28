@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace MegaDeskWindownsFilipe
 {
-    enum SurfaceMaterial
+    public enum SurfaceMaterial
     {
         Pine,
         Laminate,
@@ -19,7 +19,7 @@ namespace MegaDeskWindownsFilipe
     /// This class provide the ability to create a desk object
     /// that will be used for the quote in the program
     /// </summary>
-    class Desk
+    public class Desk
     {
         const decimal MAX_DEPTH = 48;
         const decimal MIN_DEPTH = 12;

@@ -12,7 +12,7 @@ namespace MegaDeskWindownsFilipe
 {
     public partial class AddQuote : Form
     {
-        //public DeskQuote Quote { get; set; }
+        public DeskQuote Quote { get; set; }
 
         public AddQuote()
         {
