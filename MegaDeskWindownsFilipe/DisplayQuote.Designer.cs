@@ -223,7 +223,7 @@ namespace MegaDeskWindownsFilipe
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(484, 361);
+            this.ClientSize = new System.Drawing.Size(600, 411);
             this.Controls.Add(this.quote_date);
             this.Controls.Add(this.date);
             this.Controls.Add(this.total);
@@ -241,6 +241,9 @@ namespace MegaDeskWindownsFilipe
             this.Controls.Add(this.finalQuoteName);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label1);
+            this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(616, 450);
+            this.MinimumSize = new System.Drawing.Size(616, 450);
             this.Name = "DisplayQuote";
             this.Text = "Display Quote";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.displayQuote__FormClosed);

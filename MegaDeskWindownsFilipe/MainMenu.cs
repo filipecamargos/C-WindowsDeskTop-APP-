@@ -17,53 +17,50 @@ namespace MegaDeskWindownsFilipe
             InitializeComponent();
         }
 
-        private void MainMenu_Load(object sender, EventArgs e)
+        private void navigateToForm(Form form)
         {
+            form.Tag = this;
+            form.Show(); // New forms need to be shown before their location
+            form.Hide(); // can be set.
+            form.Location = this.Location;
+            this.Hide();         
+            form.Show();
+        }
 
+        private void navigateToAddQuote()
+        {
+            var addQuoteForm = new AddQuote();
+            navigateToForm(addQuoteForm);
+        }
+
+        private void navigateToViewAllQuotes()
+        {
+            var viewAllQuotesForm = new ViewAllQuotes();
+            navigateToForm(viewAllQuotesForm);
+        }
+
+        private void navigateToSearchQuotes()
+        {
+            var searchQuotesForm = new SearchQuotes();
+            navigateToForm(searchQuotesForm);
         }
 
         private void btnAddNewQuote_Click(object sender, EventArgs e)
         {
-            //Create a new fromAddQuotes object
-            var formAddQuote = new AddQuote();
-
-            //Pass a reference to this Main manu as a tag to the addQuoteform
-            formAddQuote.Tag = this;
-
-            //Display the add quote and hide the Main menu
-            formAddQuote.Show();
-            this.Hide();
-
+            navigateToAddQuote();
         }
 
         private void btnViewAllQuotes_Click(object sender, EventArgs e)
         {
-            //Create a new viewAllQuotes object
-            var viewAllQuotes = new ViewAllQuotes();
-
-            //Pass a reference to this Main manu as a tag to the viewAllQuotes
-            viewAllQuotes.Tag = this;
-
-            //Display the viewAllQuotes and hide the Main menu
-            viewAllQuotes.Show();
-            this.Hide();
-
+            navigateToViewAllQuotes();
         }
 
         private void btnSearchQuotes_Click(object sender, EventArgs e)
         {
-            //Create a new searchQuotes object
-            var searchQuotes = new SearchQuotes();
-
-            //Pass a reference to this Main manu as a tag to the searchQuotes
-            searchQuotes.Tag = this;
-
-            //Display the searchQuotes and hide the Main menu
-            searchQuotes.Show();
-            this.Hide();
+            navigateToSearchQuotes();
         }
 
-        private void btn_exit(object sender, EventArgs e)
+        private void btnExit_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }

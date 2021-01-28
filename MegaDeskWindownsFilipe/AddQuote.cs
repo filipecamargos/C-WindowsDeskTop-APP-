@@ -12,58 +12,97 @@ namespace MegaDeskWindownsFilipe
 {
     public partial class AddQuote : Form
     {
+        public DeskQuote Quote { get; set; }
+
         public AddQuote()
         {
             InitializeComponent();
         }
 
-        private void AddQuote_FormClosed(object sender, FormClosedEventArgs e)
+        private void navigateToForm(Form form)
+        {           
+            form.Tag = this;
+            form.Location = this.Location;
+            this.Hide();
+            form.Show();
+        }
+
+        private void navigateToDisplayQuote()
         {
-            var mainMenu = new MainMenu();
-            mainMenu.Show();
+            var displayQuoteForm = new DisplayQuote();
+            navigateToForm(displayQuoteForm);            
+        }
+
+        private void navigateToMainMenu()
+        {
+            var mainMenuForm = (MainMenu)this.Tag;
+            navigateToForm(mainMenuForm);
         }
 
         private void AddQuote_Load(object sender, EventArgs e)
         {
+            material.DataSource = Enum.GetValues(typeof(SurfaceMaterial));
+            material.SelectedItem = SurfaceMaterial.Pine;
+            delivery.SelectedItem = "14 day (no rush)";
+        }
 
+        private void AddQuote_FormClosed(object sender, FormClosedEventArgs e)
+        {         
+            navigateToMainMenu();
         }
 
         private void closeAddQuote_Click(object sender, EventArgs e)
         {
-            this.Close();
+            navigateToMainMenu();
+        }
+
+        private Desk getDeskFromInput()
+        {
+            // get width, depth, and number of drawers from input
+            decimal width = this.width.Value;
+            decimal depth = this.depth.Value;
+            int numberOfDrawers = (int)this.drawers.Value;
+
+            // get surface material from input and convert it to enum
+            string surfaceMaterialStr = this.material.SelectedValue.ToString();
+            SurfaceMaterial surfaceMaterial;
+            surfaceMaterial = (SurfaceMaterial)Enum.Parse(typeof(SurfaceMaterial), surfaceMaterialStr);
+
+            return new Desk(width, depth, numberOfDrawers, surfaceMaterial);
+        }
+
+        private DeskQuote getDeskQuoteFromInput()
+        {
+            // get customer name and desk from input
+            string customerName = this.customerName.Text;
+            Desk desk = getDeskFromInput();
+
+            // get shipping from input and convert to enum
+            string shippingStr = this.delivery.SelectedItem.ToString();
+            Shipping shipping;
+            shipping = DeskQuote.shippingDict[shippingStr];
+                  
+            DateTime date = DateTime.Today;
+
+            return new DeskQuote(customerName, shipping, desk, date);
         }
 
         private void saveQuote(object sender, EventArgs e)
         {
-            //Get all the information
-            string customerName = this.customerName.ToString();
-            decimal width = this.width.Value;
-            decimal depth = this.depth.Value;
-            int numberOfDrawers = (int)this.drawers.Value;
-            string surfaceMaterial = this.material.ToString();
-            string shipping = this.delivery.ToString();
+            //Get all the information from the form inputs
+            Quote = getDeskQuoteFromInput();
 
-            //Creat the desk and set its properties
-            Desk desk = new Desk();
-            desk.Width = width;
-            desk.Depth = depth;
-            desk.NumberOfDrawers = numberOfDrawers;
-            //need some work to get the surface matching the options
-            //desk.SurfaceMaterial = (SurfaceMaterial)Enum.Parse(typeof(SurfaceMaterial), surfaceMaterial);
-
-            //Get the quote and set its properties
-            DeskQuote quote = new DeskQuote();
-            quote.CustomerName = customerName;
-            quote.Desk = desk;
-            //need some work to get the shipping matching the options
-            //quote.Shipping = (Shipping)Enum.Parse(typeof(Shipping), shipping);
-
-            //Save the quote and move to the display of the quote passing the new info
-            var displaQuote = new DisplayQuote();
-            displaQuote.Tag = this;
-            displaQuote.Tag = quote;
-            displaQuote.Show();
-            this.Hide();
+            //Save the quote and move to the display of the quote passing the new info             
+            navigateToDisplayQuote();
+        }
+             
+        private void customerName_TextChanged(object sender, EventArgs e)
+        {
+            // Disable save quote button if no custome name has been entered
+            if (customerName.Text != "")
+            {
+                saveNewQuote.Enabled = true;
+            }
         }
     }
 }
