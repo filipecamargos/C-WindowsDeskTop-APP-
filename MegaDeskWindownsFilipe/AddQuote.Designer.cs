@@ -59,7 +59,7 @@ namespace MegaDeskWindownsFilipe
             this.closeAddQuote.Location = new System.Drawing.Point(318, 285);
             this.closeAddQuote.Name = "closeAddQuote";
             this.closeAddQuote.Size = new System.Drawing.Size(150, 54);
-            this.closeAddQuote.TabIndex = 1;
+            this.closeAddQuote.TabIndex = 3;
             this.closeAddQuote.Text = "Close";
             this.closeAddQuote.UseVisualStyleBackColor = false;
             this.closeAddQuote.Click += new System.EventHandler(this.closeAddQuote_Click);
@@ -79,7 +79,7 @@ namespace MegaDeskWindownsFilipe
             this.customerName.Location = new System.Drawing.Point(36, 45);
             this.customerName.Name = "customerName";
             this.customerName.Size = new System.Drawing.Size(217, 20);
-            this.customerName.TabIndex = 3;
+            this.customerName.TabIndex = 0;
             // 
             // label2
             // 
@@ -90,7 +90,6 @@ namespace MegaDeskWindownsFilipe
             this.label2.TabIndex = 4;
             this.label2.Text = "Width:";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // label3
             // 
@@ -101,7 +100,6 @@ namespace MegaDeskWindownsFilipe
             this.label3.TabIndex = 5;
             this.label3.Text = "Depth:";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // label4
             // 
@@ -112,7 +110,6 @@ namespace MegaDeskWindownsFilipe
             this.label4.TabIndex = 6;
             this.label4.Text = "Number of Drawers:";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // label5
             // 
@@ -123,7 +120,6 @@ namespace MegaDeskWindownsFilipe
             this.label5.TabIndex = 7;
             this.label5.Text = "Surface Material:";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // label6
             // 
@@ -134,7 +130,6 @@ namespace MegaDeskWindownsFilipe
             this.label6.TabIndex = 8;
             this.label6.Text = "Delivery:";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
             // width
             // 
@@ -151,13 +146,12 @@ namespace MegaDeskWindownsFilipe
             0});
             this.width.Name = "width";
             this.width.Size = new System.Drawing.Size(120, 20);
-            this.width.TabIndex = 9;
+            this.width.TabIndex = 0;
             this.width.Value = new decimal(new int[] {
             24,
             0,
             0,
             0});
-            this.width.ValueChanged += new System.EventHandler(this.width_ValueChanged);
             // 
             // depth
             // 
@@ -174,13 +168,12 @@ namespace MegaDeskWindownsFilipe
             0});
             this.depth.Name = "depth";
             this.depth.Size = new System.Drawing.Size(120, 20);
-            this.depth.TabIndex = 10;
+            this.depth.TabIndex = 1;
             this.depth.Value = new decimal(new int[] {
             12,
             0,
             0,
             0});
-            this.depth.ValueChanged += new System.EventHandler(this.depth_ValueChanged);
             // 
             // drawers
             // 
@@ -192,8 +185,7 @@ namespace MegaDeskWindownsFilipe
             0});
             this.drawers.Name = "drawers";
             this.drawers.Size = new System.Drawing.Size(120, 20);
-            this.drawers.TabIndex = 11;
-            this.drawers.ValueChanged += new System.EventHandler(this.drawers_ValueChanged);
+            this.drawers.TabIndex = 2;
             // 
             // label7
             // 
@@ -218,22 +210,15 @@ namespace MegaDeskWindownsFilipe
             this.material.Location = new System.Drawing.Point(139, 118);
             this.material.Name = "material";
             this.material.Size = new System.Drawing.Size(120, 21);
-            this.material.TabIndex = 13;
-            this.material.SelectedIndexChanged += new System.EventHandler(this.material_SelectedIndexChanged);
+            this.material.TabIndex = 3;
             // 
             // delivery
             // 
             this.delivery.FormattingEnabled = true;
-            this.delivery.Items.AddRange(new object[] {
-            "NoRush",
-            "Rush3Days",
-            "Rush5Days",
-            "Rush7Day"});
             this.delivery.Location = new System.Drawing.Point(36, 98);
             this.delivery.Name = "delivery";
             this.delivery.Size = new System.Drawing.Size(121, 21);
-            this.delivery.TabIndex = 14;
-            this.delivery.SelectedIndexChanged += new System.EventHandler(this.delivery_SelectedIndexChanged);
+            this.delivery.TabIndex = 1;
             // 
             // saveNewQuote
             // 
@@ -241,7 +226,7 @@ namespace MegaDeskWindownsFilipe
             this.saveNewQuote.Location = new System.Drawing.Point(140, 285);
             this.saveNewQuote.Name = "saveNewQuote";
             this.saveNewQuote.Size = new System.Drawing.Size(150, 54);
-            this.saveNewQuote.TabIndex = 15;
+            this.saveNewQuote.TabIndex = 2;
             this.saveNewQuote.Text = "Save Quote";
             this.saveNewQuote.UseVisualStyleBackColor = false;
             this.saveNewQuote.Click += new System.EventHandler(this.saveQuote);
@@ -255,7 +240,7 @@ namespace MegaDeskWindownsFilipe
             this.grpOrderDetails.Location = new System.Drawing.Point(20, 76);
             this.grpOrderDetails.Name = "grpOrderDetails";
             this.grpOrderDetails.Size = new System.Drawing.Size(270, 156);
-            this.grpOrderDetails.TabIndex = 16;
+            this.grpOrderDetails.TabIndex = 0;
             this.grpOrderDetails.TabStop = false;
             this.grpOrderDetails.Text = "Order Details";
             // 
@@ -272,7 +257,7 @@ namespace MegaDeskWindownsFilipe
             this.grpDeskDetails.Location = new System.Drawing.Point(318, 76);
             this.grpDeskDetails.Name = "grpDeskDetails";
             this.grpDeskDetails.Size = new System.Drawing.Size(270, 156);
-            this.grpDeskDetails.TabIndex = 17;
+            this.grpDeskDetails.TabIndex = 1;
             this.grpDeskDetails.TabStop = false;
             this.grpDeskDetails.Text = "Desk Details";
             // 
