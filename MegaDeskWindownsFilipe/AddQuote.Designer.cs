@@ -215,6 +215,11 @@ namespace MegaDeskWindownsFilipe
             // delivery
             // 
             this.delivery.FormattingEnabled = true;
+            this.delivery.Items.AddRange(new object[] {
+            "14 day (no rush)",
+            "7 day",
+            "5 day",
+            "3 day"});
             this.delivery.Location = new System.Drawing.Point(36, 98);
             this.delivery.Name = "delivery";
             this.delivery.Size = new System.Drawing.Size(121, 21);
