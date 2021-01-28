@@ -26,6 +26,15 @@ namespace MegaDeskWindownsFilipe
             form.Show();
             form.Location = this.Location;
         }
+
+        private void navigateBackToMainMenu()
+        {
+            var frmMainMenu = (MainMenu)this.Tag;
+            frmMainMenu.Location = this.Location;
+            this.Hide();
+            frmMainMenu.Show();
+        }
+
         private void AddQuote_Load(object sender, EventArgs e)
         {
             material.DataSource = Enum.GetValues(typeof(SurfaceMaterial));
@@ -35,15 +44,13 @@ namespace MegaDeskWindownsFilipe
         }
 
         private void AddQuote_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            var mainMenuForm = new MainMenu();
-            navigateToForm(mainMenuForm);
+        {         
+            navigateBackToMainMenu();
         }
 
         private void closeAddQuote_Click(object sender, EventArgs e)
         {
-            var mainMenuForm = new MainMenu();
-            navigateToForm(mainMenuForm);
+            navigateBackToMainMenu();
         }
 
         private Desk getDeskFromInput()
@@ -73,14 +80,11 @@ namespace MegaDeskWindownsFilipe
         private void saveQuote(object sender, EventArgs e)
         {
             //Get all the information from the form inputs
-            DeskQuote quote = getDeskQuoteFromInput();
+            Quote = getDeskQuoteFromInput();
 
             //Save the quote and move to the display of the quote passing the new info
-            var displayQuote = new DisplayQuote();
-            displayQuote.Tag = this;
-            displayQuote.Tag = quote;
-            displayQuote.Show();
-            this.Hide();
+            var displayQuoteForm = new DisplayQuote();
+            navigateToForm(displayQuoteForm);
         }
     }
 }
