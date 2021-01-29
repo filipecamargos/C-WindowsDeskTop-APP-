@@ -26,3 +26,6 @@ D:\school\21-winter\net\MegaDeskv2\MegaDeskWindownsFilipe\obj\Debug\MegaDeskWind
 D:\school\21-winter\net\MegaDeskv2\MegaDeskWindownsFilipe\obj\Debug\MegaDeskWindownsFilipe.csproj.CoreCompileInputs.cache
 D:\school\21-winter\net\MegaDeskv2\MegaDeskWindownsFilipe\obj\Debug\MegaDeskWindownsFilipe.exe
 D:\school\21-winter\net\MegaDeskv2\MegaDeskWindownsFilipe\obj\Debug\MegaDeskWindownsFilipe.pdb
+C:\Users\filip\OneDrive\Desktop\BYUI Semester\BYUI 8th Semester\CIT 365\Week03\MegaDesk\MegaDeskWindownsFilipe\MegaDeskWindownsFilipe\bin\Debug\Newtonsoft.Json.dll
+C:\Users\filip\OneDrive\Desktop\BYUI Semester\BYUI 8th Semester\CIT 365\Week03\MegaDesk\MegaDeskWindownsFilipe\MegaDeskWindownsFilipe\bin\Debug\Newtonsoft.Json.xml
+C:\Users\filip\OneDrive\Desktop\BYUI Semester\BYUI 8th Semester\CIT 365\Week03\MegaDesk\MegaDeskWindownsFilipe\MegaDeskWindownsFilipe\obj\Debug\MegaDeskWindownsFilipe.csproj.CopyComplete

@@ -106,6 +106,9 @@ namespace MegaDeskWindownsFilipe
             //Get all the information from the form inputs
             Quote = getDeskQuoteFromInput();
 
+            //test
+            Console.WriteLine(Quote);
+
             //Save the quote and move to the display of the quote passing the new info             
             navigateToDisplayQuote();
         }

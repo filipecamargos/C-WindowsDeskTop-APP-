@@ -234,7 +234,7 @@ namespace MegaDeskWindownsFilipe
             this.btnShowQuote.Name = "btnShowQuote";
             this.btnShowQuote.Size = new System.Drawing.Size(150, 54);
             this.btnShowQuote.TabIndex = 2;
-            this.btnShowQuote.Text = "Save Quote";
+            this.btnShowQuote.Text = "Show Quote";
             this.btnShowQuote.UseVisualStyleBackColor = false;
             this.btnShowQuote.Click += new System.EventHandler(this.btnShowQuote_Click);
             // 
