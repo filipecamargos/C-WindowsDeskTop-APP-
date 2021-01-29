@@ -16,6 +16,11 @@ namespace MegaDeskWindownsFilipe
 
     public class DeskQuote
     {
+        private const decimal BASE_PRICE = 200;
+        private const decimal DRAWER_PRICE = 50;
+        private const decimal MAX_FREE_SURFACE_AREA = 50;
+
+
         public static Dictionary<string, Shipping> shippingDict
             = new Dictionary<string, Shipping> {
                 { "14 day (no rush)", Shipping.NoRush },
@@ -47,26 +52,19 @@ namespace MegaDeskWindownsFilipe
             QuoteDate = date;
         }
 
-        public decimal GetQuotePrice()
-        {
-            decimal basePrice = 200;
-            
-            return basePrice + getDrawersPrice() + getSurfaceAreaPrice()
-                   + getMaterialPrice() + getShippingPrice();
-        }
 
         private decimal getDrawersPrice()
         {
-            return 50 * Desk.NumberOfDrawers;
+            return DRAWER_PRICE * Desk.NumberOfDrawers;
         }
 
         private decimal getSurfaceAreaPrice()
         {
-            return Desk.SurfaceArea > 1000 ? Desk.SurfaceArea - 1000 : 0;
+            return Desk.SurfaceArea > MAX_FREE_SURFACE_AREA ? Desk.SurfaceArea - MAX_FREE_SURFACE_AREA : 0;
         }
 
         private decimal getMaterialPrice()
-        {                 
+        {
             // Calculate Surface material price
             switch (Desk.SurfaceMaterial)
             {
@@ -79,15 +77,24 @@ namespace MegaDeskWindownsFilipe
                 case SurfaceMaterial.Oak:
                     return 200;
                 case SurfaceMaterial.Rosewood:
-                    return 300;                           
+                    return 300;
                 default:
                     return 0;
             }
         }
 
-        private decimal _getShippingPrice()
+        public decimal GetQuotePrice()
         {
-/*  
+            decimal basePrice = BASE_PRICE;
+            
+            return basePrice + getDrawersPrice() + getSurfaceAreaPrice()
+                   + getMaterialPrice() + getShippingPrice();
+        }
+
+
+        private decimal getShippingPrice()
+        {
+            /*  
             Shipping Price Array Visualization
 
             |Shipping |     Size of Desk (in^2)           |
@@ -103,55 +110,10 @@ namespace MegaDeskWindownsFilipe
                                       { 40, 50, 60},
                                       { 60, 70, 80 }};
             int rushIndex = (int)Shipping;
-            int sizeIndex = (int)Desk.SurfaceArea / 1000;
+            int sizeIndex = (int)(Desk.SurfaceArea - 1) / 1000;
             decimal shippingPrice = shippingPrices[rushIndex, sizeIndex];
+            
             return shippingPrice;
-        }
-
-        private decimal getShippingPrice()
-        {
-            //Desk are less than a 1000
-            if(Desk.SurfaceArea < 1000)
-            {
-                switch (Shipping)
-                {
-                    case Shipping.Rush3Days:
-                        return 60;
-                    case Shipping.Rush5Days:
-                        return 40;
-                    case Shipping.Rush7Days:
-                        return 30;
-                }
-            }
-
-            //Shipping area between 1000 and 2000
-            else if (Desk.SurfaceArea >= 1000 && Desk.SurfaceArea <= 2000)
-            {
-                switch (Shipping)
-                {
-                    case Shipping.Rush3Days:
-                        return 70;
-                    case Shipping.Rush5Days:
-                        return 50;
-                    case Shipping.Rush7Days:
-                        return 35;
-                }
-            }
-            //Shipping area between 1000 and 2000
-            else if (Desk.SurfaceArea > 2000)
-            {
-                switch (Shipping)
-                {
-                    case Shipping.Rush3Days:
-                        return 80;
-                    case Shipping.Rush5Days:
-                        return 60;
-                    case Shipping.Rush7Days:
-                        return 40;
-                }
-            }
-            //If there is not rush just return
-            return 0;
         }
     }
 }

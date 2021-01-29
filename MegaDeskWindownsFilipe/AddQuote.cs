@@ -29,7 +29,7 @@ namespace MegaDeskWindownsFilipe
 
         private void navigateToDisplayQuote()
         {
-            var displayQuoteForm = new DisplayQuote();
+            var displayQuoteForm = new DisplayQuote(Quote);
             navigateToForm(displayQuoteForm);            
         }
 
@@ -67,6 +67,8 @@ namespace MegaDeskWindownsFilipe
             string surfaceMaterialStr = this.material.SelectedValue.ToString();
             SurfaceMaterial surfaceMaterial;
             surfaceMaterial = (SurfaceMaterial)Enum.Parse(typeof(SurfaceMaterial), surfaceMaterialStr);
+
+            Console.WriteLine(surfaceMaterial); //Console the surface
 
             return new Desk(width, depth, numberOfDrawers, surfaceMaterial);
         }
