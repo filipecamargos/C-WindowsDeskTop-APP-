@@ -87,22 +87,27 @@ namespace MegaDeskWindownsFilipe
             return new DeskQuote(customerName, shipping, desk, date);
         }
 
-        private void saveQuote(object sender, EventArgs e)
+        private void customerName_TextChanged(object sender, EventArgs e)
+        {
+            // Disable save quote button if no custome name has been entered
+            if (customerName.Text != "")
+            {
+                btnShowQuote.Enabled = true;
+            }
+        }
+
+        /// <summary>
+        /// Event handle with the button click
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void btnShowQuote_Click(object sender, EventArgs e)
         {
             //Get all the information from the form inputs
             Quote = getDeskQuoteFromInput();
 
             //Save the quote and move to the display of the quote passing the new info             
             navigateToDisplayQuote();
-        }
-             
-        private void customerName_TextChanged(object sender, EventArgs e)
-        {
-            // Disable save quote button if no custome name has been entered
-            if (customerName.Text != "")
-            {
-                saveNewQuote.Enabled = true;
-            }
         }
     }
 }

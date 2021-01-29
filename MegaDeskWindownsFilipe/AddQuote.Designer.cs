@@ -43,7 +43,7 @@ namespace MegaDeskWindownsFilipe
             this.label7 = new System.Windows.Forms.Label();
             this.material = new System.Windows.Forms.ComboBox();
             this.delivery = new System.Windows.Forms.ComboBox();
-            this.saveNewQuote = new System.Windows.Forms.Button();
+            this.btnShowQuote = new System.Windows.Forms.Button();
             this.grpOrderDetails = new System.Windows.Forms.GroupBox();
             this.grpDeskDetails = new System.Windows.Forms.GroupBox();
             ((System.ComponentModel.ISupportInitialize)(this.width)).BeginInit();
@@ -226,17 +226,17 @@ namespace MegaDeskWindownsFilipe
             this.delivery.Size = new System.Drawing.Size(121, 21);
             this.delivery.TabIndex = 1;
             // 
-            // saveNewQuote
+            // btnShowQuote
             // 
-            this.saveNewQuote.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.saveNewQuote.Enabled = false;
-            this.saveNewQuote.Location = new System.Drawing.Point(140, 285);
-            this.saveNewQuote.Name = "saveNewQuote";
-            this.saveNewQuote.Size = new System.Drawing.Size(150, 54);
-            this.saveNewQuote.TabIndex = 2;
-            this.saveNewQuote.Text = "Save Quote";
-            this.saveNewQuote.UseVisualStyleBackColor = false;
-            this.saveNewQuote.Click += new System.EventHandler(this.saveQuote);
+            this.btnShowQuote.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.btnShowQuote.Enabled = false;
+            this.btnShowQuote.Location = new System.Drawing.Point(140, 285);
+            this.btnShowQuote.Name = "btnShowQuote";
+            this.btnShowQuote.Size = new System.Drawing.Size(150, 54);
+            this.btnShowQuote.TabIndex = 2;
+            this.btnShowQuote.Text = "Save Quote";
+            this.btnShowQuote.UseVisualStyleBackColor = false;
+            this.btnShowQuote.Click += new System.EventHandler(this.btnShowQuote_Click);
             // 
             // grpOrderDetails
             // 
@@ -275,7 +275,7 @@ namespace MegaDeskWindownsFilipe
             this.ClientSize = new System.Drawing.Size(600, 411);
             this.Controls.Add(this.grpDeskDetails);
             this.Controls.Add(this.grpOrderDetails);
-            this.Controls.Add(this.saveNewQuote);
+            this.Controls.Add(this.btnShowQuote);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.closeAddQuote);
             this.MaximizeBox = false;
@@ -311,7 +311,7 @@ namespace MegaDeskWindownsFilipe
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.ComboBox material;
         private System.Windows.Forms.ComboBox delivery;
-        private System.Windows.Forms.Button saveNewQuote;
+        private System.Windows.Forms.Button btnShowQuote;
         private System.Windows.Forms.GroupBox grpOrderDetails;
         private System.Windows.Forms.GroupBox grpDeskDetails;
     }
