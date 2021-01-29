@@ -68,8 +68,6 @@ namespace MegaDeskWindownsFilipe
             SurfaceMaterial surfaceMaterial;
             surfaceMaterial = (SurfaceMaterial)Enum.Parse(typeof(SurfaceMaterial), surfaceMaterialStr);
 
-            Console.WriteLine(surfaceMaterial); //Console the surface
-
             return new Desk(width, depth, numberOfDrawers, surfaceMaterial);
         }
 
