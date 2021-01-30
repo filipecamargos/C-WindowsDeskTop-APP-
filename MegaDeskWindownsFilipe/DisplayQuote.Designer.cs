@@ -46,6 +46,7 @@ namespace MegaDeskWindownsFilipe
             this.total = new System.Windows.Forms.Label();
             this.date = new System.Windows.Forms.Label();
             this.quote_date = new System.Windows.Forms.Label();
+            this.saveQuote = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label7
@@ -219,11 +220,23 @@ namespace MegaDeskWindownsFilipe
             this.quote_date.TabIndex = 44;
             this.quote_date.Text = "x/x/xxxx";
             // 
+            // saveQuote
+            // 
+            this.saveQuote.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.saveQuote.Location = new System.Drawing.Point(178, 345);
+            this.saveQuote.Name = "saveQuote";
+            this.saveQuote.Size = new System.Drawing.Size(150, 54);
+            this.saveQuote.TabIndex = 45;
+            this.saveQuote.Text = "Save Quote";
+            this.saveQuote.UseVisualStyleBackColor = false;
+            this.saveQuote.Click += new System.EventHandler(this.saveQuote_Click);
+            // 
             // DisplayQuote
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(600, 411);
+            this.Controls.Add(this.saveQuote);
             this.Controls.Add(this.quote_date);
             this.Controls.Add(this.date);
             this.Controls.Add(this.total);
@@ -271,5 +284,6 @@ namespace MegaDeskWindownsFilipe
         private System.Windows.Forms.Label total;
         private System.Windows.Forms.Label date;
         private System.Windows.Forms.Label quote_date;
+        private System.Windows.Forms.Button saveQuote;
     }
 }
