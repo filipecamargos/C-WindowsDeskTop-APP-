@@ -66,6 +66,7 @@ namespace MegaDeskWindownsFilipe
 
             //test
             Console.WriteLine("Create the file " + quote.ToString());
+
             //add to the list
             deskQuotes.Add(quote);
 
