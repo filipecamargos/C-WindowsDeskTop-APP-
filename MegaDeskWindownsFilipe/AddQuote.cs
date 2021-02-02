@@ -11,17 +11,23 @@ using System.Windows.Forms;
 namespace MegaDeskWindownsFilipe
 {
     public partial class AddQuote : Form
-    {
+    {  
         public DeskQuote Quote { get; set; }
+        private Form mainMenu;
 
-        public AddQuote()
+        public AddQuote(Form mainMenu)
         {
             InitializeComponent();
+            this.mainMenu = mainMenu;
         }
 
+        /// <summary>
+        /// Give the appearance of navigation by hiding the current form and
+        /// showing the supplied form.
+        /// </summary>
+        /// <param name="form"></param>
         private void navigateToForm(Form form)
-        {           
-            form.Tag = this;
+        {                    
             form.Location = this.Location;
             this.Hide();
             form.Show();
@@ -29,13 +35,13 @@ namespace MegaDeskWindownsFilipe
 
         private void navigateToDisplayQuote()
         {
-            var displayQuoteForm = new DisplayQuote(Quote);
+            var displayQuoteForm = new DisplayQuote(Quote, mainMenu, this);        
             navigateToForm(displayQuoteForm);            
         }
 
         private void navigateToMainMenu()
         {
-            var mainMenuForm = (MainMenu)this.Tag;
+            var mainMenuForm = (MainMenu)mainMenu;
             navigateToForm(mainMenuForm);
         }
 

@@ -15,27 +15,44 @@ namespace MegaDeskWindownsFilipe
     public partial class DisplayQuote : Form
     {
         private DeskQuote quote;
+        private Form mainMenu;
+        private Form previousForm;
 
-        public DisplayQuote(DeskQuote quote)
+        public DisplayQuote(DeskQuote quote, Form mainMenu, Form previousForm)
         {
             InitializeComponent();
             this.quote = quote;
+            this.mainMenu = mainMenu;
+            this.previousForm = previousForm;
+        }
+
+        /// <summary>
+        /// Give the appearance of navigation by hiding the current form and
+        /// showing the supplied form.
+        /// </summary>
+        /// <param name="form"></param>
+        private void navigateToForm(Form form)
+        {
+            form.Location = this.Location;
+            this.Hide();
+            form.Show();
         }
 
         private void displayQuote__FormClosed(object sender, FormClosedEventArgs e)
         {
-            var addQuote = new AddQuote();
-            addQuote.Show();
+            navigateToForm(mainMenu);         
         }
 
         private void DisplayQuote_Load(object sender, EventArgs e)
         {
-
+            // populate all the labels
         }
 
         private void saveQuote_Click(object sender, EventArgs e)
         {
             AddQuoteToFile();
+            navigateToForm(mainMenu);
+            this.Close();
         }        
 
         /// <summary>
@@ -43,7 +60,7 @@ namespace MegaDeskWindownsFilipe
         /// </summary>
         private void AddQuoteToFile()
         {
-            var quotesFile = @"testFile.json";
+            var quotesFile = @"quotes.json";
 
             // Get list of existing quotes (if any)
             List<DeskQuote> deskQuotes = getQuotesFromFile(quotesFile);
@@ -91,7 +108,10 @@ namespace MegaDeskWindownsFilipe
         {
             using (StreamWriter writer = new StreamWriter(quotesFile))
             {
+                // Serialize quotes list
                 var quotesJson = JsonConvert.SerializeObject(deskQuotes);
+
+                // Write to file
                 writer.Write(quotesJson);
             }
         }

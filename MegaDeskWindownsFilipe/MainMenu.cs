@@ -17,19 +17,21 @@ namespace MegaDeskWindownsFilipe
             InitializeComponent();
         }
 
+        /// <summary>
+        /// Give the appearance of navigation by hiding the current form and
+        /// showing the supplied form.
+        /// </summary>
+        /// <param name="form"></param>
         private void navigateToForm(Form form)
         {
-            form.Tag = this;
-            form.Show(); // New forms need to be shown before their location
-            form.Hide(); // can be set.
-            form.Location = this.Location;
             this.Hide();         
             form.Show();
+            form.Location = this.Location;
         }
 
         private void navigateToAddQuote()
         {
-            var addQuoteForm = new AddQuote();
+            var addQuoteForm = new AddQuote(this);
             navigateToForm(addQuoteForm);
         }
 
