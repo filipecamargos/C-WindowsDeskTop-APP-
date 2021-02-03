@@ -10,8 +10,14 @@ using System.Windows.Forms;
 
 namespace MegaDeskWindownsFilipe
 {
+    /// <summary>
+    /// This class is responsible for allowing the user 
+    /// to input information and generate a code
+    /// </summary>
     public partial class AddQuote : Form
     {  
+        //DeskQuote which will hold the quote info
+        //And a mainMenuForm to allow navegation back
         public DeskQuote Quote { get; set; }
         private Form mainMenuForm;
 

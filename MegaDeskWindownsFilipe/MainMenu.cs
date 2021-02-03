@@ -10,8 +10,15 @@ using System.Windows.Forms;
 
 namespace MegaDeskWindownsFilipe
 {
+    /// <summary>
+    /// This is a class form that initite the menu for 
+    /// the quote program
+    /// </summary>
     public partial class MainMenu : Form
     {
+        /// <summary>
+        /// Initiate the main menu
+        /// </summary>
         public MainMenu()
         {
             InitializeComponent();
@@ -29,39 +36,55 @@ namespace MegaDeskWindownsFilipe
             form.Show();           
         }
 
+        /// <summary>
+        /// Takes the the user to AddQuote and pass
+        /// this as a reference
+        /// </summary>
         private void navigateToAddQuote()
         {
             var addQuoteForm = new AddQuote(this);
             navigateToForm(addQuoteForm);
         }
 
+        /// <summary>
+        /// Takes the the user to ViewAllQuotes and pass
+        /// this as a reference
+        /// </summary>
         private void navigateToViewAllQuotes()
         {
             var viewAllQuotesForm = new ViewAllQuotes(this);
             navigateToForm(viewAllQuotesForm);
         }
 
+        /// <summary>
+        /// Takes the the user to SearchQuotes and pass
+        /// this as a reference
+        /// </summary>
         private void navigateToSearchQuotes()
         {
-            var searchQuotesForm = new SearchQuotes();
+            var searchQuotesForm = new SearchQuotes(this);
             navigateToForm(searchQuotesForm);
         }
 
+        //BTN to take to new Quote
         private void btnAddNewQuote_Click(object sender, EventArgs e)
         {
             navigateToAddQuote();
         }
 
+        //BTN to take to view all quotes
         private void btnViewAllQuotes_Click(object sender, EventArgs e)
         {
             navigateToViewAllQuotes();
         }
 
+        //BTN to take to search for quotes
         private void btnSearchQuotes_Click(object sender, EventArgs e)
         {
             navigateToSearchQuotes();
         }
 
+        //Exite the form
         private void btnExit_Click(object sender, EventArgs e)
         {
             Application.Exit();
