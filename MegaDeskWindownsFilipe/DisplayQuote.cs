@@ -12,12 +12,26 @@ using Newtonsoft.Json;
 
 namespace MegaDeskWindownsFilipe
 {
+    /// <summary>
+    /// Form resposnible for display the quote to the user
+    /// it also provides the saving functionality
+    /// </summary>
     public partial class DisplayQuote : Form
     {
+        //quote = to hold the quote 
+        // mainMenuForm = reference to Menu 
+        // addQuoteFrom = reference to the Add Quote option
         private DeskQuote quote;
         private Form mainMenuForm;
         private Form addQuoteForm;
 
+        /// <summary>
+        /// Intantiate the objects
+        /// And initilize the components for the form
+        /// </summary>
+        /// <param name="quote"></param>
+        /// <param name="mainMenuForm"></param>
+        /// <param name="addQuoteForm"></param>
         public DisplayQuote(DeskQuote quote, Form mainMenuForm, Form addQuoteForm)
         {
             InitializeComponent();
@@ -39,6 +53,12 @@ namespace MegaDeskWindownsFilipe
             form.Show();
         }
 
+        /// <summary>
+        /// Get all the information from the quore and 
+        /// display to the user
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void DisplayQuote_Load(object sender, EventArgs e)
         {
             // populate all the labels with quote info
@@ -52,11 +72,13 @@ namespace MegaDeskWindownsFilipe
             total.Text = "$ " + quote.QuotePrice.ToString();
         }
 
+        //Handle the cancel btn
         private void cancel_Click(object sender, EventArgs e)
         {
             this.Close();
         }
 
+        //Handle the save quote btn
         private void saveQuote_Click(object sender, EventArgs e)
         {
             AddQuoteToFile();
@@ -64,6 +86,7 @@ namespace MegaDeskWindownsFilipe
             addQuoteForm.Close(); // navigates to Main Menu via form close function
         }
 
+        //Handle the form being exit out
         private void DisplayQuote_FormClosed(object sender, FormClosedEventArgs e)
         {
             navigateToForm(addQuoteForm);
