@@ -12,15 +12,24 @@ namespace MegaDeskWindownsFilipe
 {
     public partial class SearchQuotes : Form
     {
-        public SearchQuotes()
+        private Form mainMenuForm;
+
+        public SearchQuotes(in Form mainMenuForm)
         {
             InitializeComponent();
+            this.mainMenuForm = mainMenuForm;
+        }
+
+        private void navigateToForm(Form form)
+        {
+            form.Location = this.Location;
+            this.Hide();
+            form.Show();
         }
 
         private void searchQuotes_FormClose(object sender, FormClosedEventArgs e)
         {
-            var mainMenu = (MainMenu)this.Tag;
-            mainMenu.Show();
+            navigateToForm(mainMenuForm);
         }
 
         private void SearchQuotes_Load(object sender, EventArgs e)
