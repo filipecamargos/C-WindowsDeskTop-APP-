@@ -31,6 +31,7 @@ namespace MegaDeskWindownsFilipe
         {
             this.label7 = new System.Windows.Forms.Label();
             this.quotesGrid = new System.Windows.Forms.DataGridView();
+            this.btnDeleteQuotes = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.quotesGrid)).BeginInit();
             this.SuspendLayout();
             // 
@@ -50,14 +51,25 @@ namespace MegaDeskWindownsFilipe
             this.quotesGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.quotesGrid.Location = new System.Drawing.Point(12, 49);
             this.quotesGrid.Name = "quotesGrid";
-            this.quotesGrid.Size = new System.Drawing.Size(576, 350);
+            this.quotesGrid.Size = new System.Drawing.Size(576, 310);
             this.quotesGrid.TabIndex = 17;
+            // 
+            // btnDeleteQuotes
+            // 
+            this.btnDeleteQuotes.Location = new System.Drawing.Point(466, 368);
+            this.btnDeleteQuotes.Name = "btnDeleteQuotes";
+            this.btnDeleteQuotes.Size = new System.Drawing.Size(122, 34);
+            this.btnDeleteQuotes.TabIndex = 18;
+            this.btnDeleteQuotes.Text = "Delete All Quotes";
+            this.btnDeleteQuotes.UseVisualStyleBackColor = true;
+            this.btnDeleteQuotes.Click += new System.EventHandler(this.btnDeleteQuotes_Click);
             // 
             // ViewAllQuotes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(600, 411);
+            this.Controls.Add(this.btnDeleteQuotes);
             this.Controls.Add(this.quotesGrid);
             this.Controls.Add(this.label7);
             this.MaximizeBox = false;
@@ -76,5 +88,6 @@ namespace MegaDeskWindownsFilipe
         #endregion
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.DataGridView quotesGrid;
+        private System.Windows.Forms.Button btnDeleteQuotes;
     }
 }
