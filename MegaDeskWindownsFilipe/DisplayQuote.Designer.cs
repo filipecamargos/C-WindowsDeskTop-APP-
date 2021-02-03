@@ -37,13 +37,13 @@ namespace MegaDeskWindownsFilipe
             this.nameFinal = new System.Windows.Forms.Label();
             this.shippingFinal = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.materialFinal = new System.Windows.Forms.Label();
+            this.drawersFinal = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.widthFinal = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.depthFinal = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.drawersFinal = new System.Windows.Forms.Label();
+            this.materialFinal = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.total = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
@@ -132,15 +132,15 @@ namespace MegaDeskWindownsFilipe
             this.label5.TabIndex = 34;
             this.label5.Text = "Shipping:";
             // 
-            // materialFinal
+            // drawersFinal
             // 
-            this.materialFinal.AutoSize = true;
-            this.materialFinal.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.materialFinal.Location = new System.Drawing.Point(440, 170);
-            this.materialFinal.Name = "materialFinal";
-            this.materialFinal.Size = new System.Drawing.Size(20, 24);
-            this.materialFinal.TabIndex = 37;
-            this.materialFinal.Text = "x";
+            this.drawersFinal.AutoSize = true;
+            this.drawersFinal.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.drawersFinal.Location = new System.Drawing.Point(440, 170);
+            this.drawersFinal.Name = "drawersFinal";
+            this.drawersFinal.Size = new System.Drawing.Size(20, 24);
+            this.drawersFinal.TabIndex = 37;
+            this.drawersFinal.Text = "x";
             // 
             // label4
             // 
@@ -192,15 +192,15 @@ namespace MegaDeskWindownsFilipe
             this.label3.TabIndex = 32;
             this.label3.Text = "Depth:";
             // 
-            // drawersFinal
+            // materialFinal
             // 
-            this.drawersFinal.AutoSize = true;
-            this.drawersFinal.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.drawersFinal.Location = new System.Drawing.Point(440, 220);
-            this.drawersFinal.Name = "drawersFinal";
-            this.drawersFinal.Size = new System.Drawing.Size(20, 24);
-            this.drawersFinal.TabIndex = 40;
-            this.drawersFinal.Text = "x";
+            this.materialFinal.AutoSize = true;
+            this.materialFinal.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.materialFinal.Location = new System.Drawing.Point(440, 220);
+            this.materialFinal.Name = "materialFinal";
+            this.materialFinal.Size = new System.Drawing.Size(20, 24);
+            this.materialFinal.TabIndex = 40;
+            this.materialFinal.Text = "x";
             // 
             // label6
             // 
@@ -254,10 +254,10 @@ namespace MegaDeskWindownsFilipe
             this.Controls.Add(this.date);
             this.Controls.Add(this.total);
             this.Controls.Add(this.label13);
-            this.Controls.Add(this.drawersFinal);
+            this.Controls.Add(this.materialFinal);
             this.Controls.Add(this.depthFinal);
             this.Controls.Add(this.shippingFinal);
-            this.Controls.Add(this.materialFinal);
+            this.Controls.Add(this.drawersFinal);
             this.Controls.Add(this.widthFinal);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
@@ -288,13 +288,13 @@ namespace MegaDeskWindownsFilipe
         private System.Windows.Forms.Label nameFinal;
         private System.Windows.Forms.Label shippingFinal;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label materialFinal;
+        private System.Windows.Forms.Label drawersFinal;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label widthFinal;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label depthFinal;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label drawersFinal;
+        private System.Windows.Forms.Label materialFinal;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label total;
         private System.Windows.Forms.Label label13;

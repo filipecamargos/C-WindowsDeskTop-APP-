@@ -82,8 +82,12 @@ namespace MegaDeskWindownsFilipe
             set { }
         }
 
-        public int NumberOfDrawers { get; set; }
-        
+        public int NumberOfDrawers
+        {
+            get { return numberOfDrawers; }
+            set { }
+        }
+
         public SurfaceMaterial SurfaceMaterial
         {
             get { return surfaceMaterial; }
@@ -100,6 +104,9 @@ namespace MegaDeskWindownsFilipe
             this.depth = depth;
             this.numberOfDrawers = numberOfDrawers;
             this.surfaceMaterial = surfaceMaterial;
+
+            Console.WriteLine("Desk numberOfDrawers: " + this.numberOfDrawers);
+            Console.WriteLine("Desk NumberOfDrawers: " + this.NumberOfDrawers);
         }
     }
 }

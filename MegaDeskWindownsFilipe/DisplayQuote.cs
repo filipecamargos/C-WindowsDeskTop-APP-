@@ -41,10 +41,15 @@ namespace MegaDeskWindownsFilipe
 
         private void DisplayQuote_Load(object sender, EventArgs e)
         {
-            // populate all the labels
+            // populate all the labels with quote info
             dateFinal.Text = quote.QuoteDate.ToString("MMM dd, yyyy");
             nameFinal.Text = quote.CustomerName;
-            //shippingFinal = quote.Shipping.ToString();
+            shippingFinal.Text = EnumHelpers.GetDescription<Shipping>(quote.Shipping);
+            widthFinal.Text = quote.Desk.Width.ToString();
+            depthFinal.Text = quote.Desk.Depth.ToString();
+            drawersFinal.Text = quote.Desk.NumberOfDrawers.ToString();
+            materialFinal.Text = quote.Desk.SurfaceMaterial.ToString();
+            total.Text = quote.GetQuotePrice().ToString();
         }
 
         private void cancel_Click(object sender, EventArgs e)

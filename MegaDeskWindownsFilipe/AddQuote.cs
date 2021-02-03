@@ -79,6 +79,8 @@ namespace MegaDeskWindownsFilipe
             decimal depth = this.depth.Value;
             int numberOfDrawers = (int)this.drawers.Value;
 
+            Console.WriteLine("numberOfDrawers: " + numberOfDrawers);
+
             // get surface material from input and convert it to enum
             string surfaceMaterialStr = this.material.SelectedValue.ToString();
             SurfaceMaterial surfaceMaterial;
@@ -92,6 +94,8 @@ namespace MegaDeskWindownsFilipe
             // get customer name and desk from input
             string customerName = this.customerName.Text;
             Desk desk = getDeskFromInput();
+
+            Console.WriteLine("NumberOfDrawers: " + desk.NumberOfDrawers);
 
             // get shipping from input and convert to enum
             string shippingStr = this.delivery.SelectedItem.ToString();
