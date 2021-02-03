@@ -62,11 +62,11 @@ namespace MegaDeskWindownsFilipe
             QuoteDate = date;
         }
 
-        public decimal GetQuotePrice()
+        public void GetQuotePrice()
         {
             decimal basePrice = BASE_PRICE;
 
-            return basePrice + getDrawersPrice() + getSurfaceAreaPrice()
+            QuotePrice = basePrice + getDrawersPrice() + getSurfaceAreaPrice()
                    + getMaterialPrice() + getShippingPrice();
         }
 
