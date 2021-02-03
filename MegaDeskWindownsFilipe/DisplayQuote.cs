@@ -95,10 +95,7 @@ namespace MegaDeskWindownsFilipe
                 using (StreamReader reader = new StreamReader(quotesFile))
                 {
                     //load the quotes to string
-                    string quotes = reader.ReadToEnd();
-                    
-                    //test
-                    Console.WriteLine("Read from the file " + quotes);
+                    string quotes = reader.ReadToEnd();                 
 
                     if (quotes.Length > 0)
                     {

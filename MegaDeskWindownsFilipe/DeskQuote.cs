@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -8,9 +9,16 @@ namespace MegaDeskWindownsFilipe
 {
     public enum Shipping
     {
+        [Description("14 days (no rush)")]
         NoRush,
+
+        [Description("7 days")]
         Rush7Days,
+
+        [Description("5 days")]
         Rush5Days,
+
+        [Description("3 days")]
         Rush3Days      
     }
 
@@ -28,6 +36,8 @@ namespace MegaDeskWindownsFilipe
                 { "5 day", Shipping.Rush5Days },
                 { "3 day", Shipping.Rush7Days }
             };
+
+
 
         public string CustomerName { get; set; }
         public Shipping Shipping { get; set; }

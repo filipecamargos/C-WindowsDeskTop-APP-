@@ -22,6 +22,23 @@ namespace MegaDeskWindownsFilipe
             this.mainMenuForm = mainMenuForm;
         }
 
+        private void AddQuote_Load(object sender, EventArgs e)
+        {
+            // Fill "material" dropdown with enum values
+            material.DataSource = Enum.GetValues(typeof(SurfaceMaterial));
+            material.SelectedItem = SurfaceMaterial.Pine;
+
+            // Fill "shipping" dropdown with enum values
+            // Make list of shipping descriptions
+            List<string> shippingDescriptions = new List<string>();
+            foreach (int shippingOption in Shipping.GetValues(typeof(Shipping)))
+            {
+                shippingDescriptions.Add(EnumHelpers.GetDescription<Shipping>((Shipping)shippingOption));
+            }
+            delivery.DataSource = shippingDescriptions;
+            delivery.SelectedItem = EnumHelpers.GetDescription<Shipping>(Shipping.NoRush);
+        }
+
         /// <summary>
         /// Give the appearance of navigation by hiding the current form and
         /// showing the supplied form.
@@ -43,13 +60,6 @@ namespace MegaDeskWindownsFilipe
         private void navigateToMainMenu()
         {           
             navigateToForm(mainMenuForm);
-        }
-
-        private void AddQuote_Load(object sender, EventArgs e)
-        {
-            material.DataSource = Enum.GetValues(typeof(SurfaceMaterial));
-            material.SelectedItem = SurfaceMaterial.Pine;
-            delivery.SelectedItem = "14 day (no rush)";
         }
 
         private void AddQuote_FormClosed(object sender, FormClosedEventArgs e)
@@ -74,8 +84,6 @@ namespace MegaDeskWindownsFilipe
             SurfaceMaterial surfaceMaterial;
             surfaceMaterial = (SurfaceMaterial)Enum.Parse(typeof(SurfaceMaterial), surfaceMaterialStr);
 
-            Console.WriteLine(surfaceMaterial); //Console the surface
-
             return new Desk(width, depth, numberOfDrawers, surfaceMaterial);
         }
 
@@ -87,9 +95,9 @@ namespace MegaDeskWindownsFilipe
 
             // get shipping from input and convert to enum
             string shippingStr = this.delivery.SelectedItem.ToString();
-            Shipping shipping;
-            shipping = DeskQuote.shippingDict[shippingStr];
+            Shipping shipping = EnumHelpers.GetValueFromDescription<Shipping>(shippingStr);
                   
+            // get current date
             DateTime date = DateTime.Today;
 
             return new DeskQuote(customerName, shipping, desk, date);
@@ -113,9 +121,6 @@ namespace MegaDeskWindownsFilipe
         {
             //Get all the information from the form inputs
             Quote = getDeskQuoteFromInput();
-
-            //test
-            Console.WriteLine(Quote);
 
             //Save the quote and move to the display of the quote passing the new info             
             navigateToDisplayQuote();
