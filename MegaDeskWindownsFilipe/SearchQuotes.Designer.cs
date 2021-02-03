@@ -30,8 +30,8 @@ namespace MegaDeskWindownsFilipe
         private void InitializeComponent()
         {
             this.label7 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.label2 = new System.Windows.Forms.Label();
+            this.inputToSearch = new System.Windows.Forms.TextBox();
+            this.searchQuote = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label7
@@ -39,41 +39,39 @@ namespace MegaDeskWindownsFilipe
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Consolas", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label7.Location = new System.Drawing.Point(196, 11);
+            this.label7.Location = new System.Drawing.Point(60, 36);
             this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(197, 23);
+            this.label7.Size = new System.Drawing.Size(208, 23);
             this.label7.TabIndex = 15;
-            this.label7.Text = "Search for Quotes";
+            this.label7.Text = "Search for Quotes:";
             // 
-            // comboBox1
+            // inputToSearch
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(155, 82);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(571, 24);
-            this.comboBox1.TabIndex = 16;
+            this.inputToSearch.Location = new System.Drawing.Point(275, 36);
+            this.inputToSearch.Name = "inputToSearch";
+            this.inputToSearch.Size = new System.Drawing.Size(297, 22);
+            this.inputToSearch.TabIndex = 18;
             // 
-            // label2
+            // searchQuote
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Consolas", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label2.Location = new System.Drawing.Point(60, 83);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(87, 23);
-            this.label2.TabIndex = 17;
-            this.label2.Text = "Search ";
+            this.searchQuote.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.searchQuote.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.searchQuote.Location = new System.Drawing.Point(578, 36);
+            this.searchQuote.Name = "searchQuote";
+            this.searchQuote.Size = new System.Drawing.Size(72, 24);
+            this.searchQuote.TabIndex = 19;
+            this.searchQuote.Text = "Search";
+            this.searchQuote.UseVisualStyleBackColor = false;
+            this.searchQuote.Click += new System.EventHandler(this.searchQuote_Click);
             // 
             // SearchQuotes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 506);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.searchQuote);
+            this.Controls.Add(this.inputToSearch);
             this.Controls.Add(this.label7);
             this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
@@ -91,7 +89,7 @@ namespace MegaDeskWindownsFilipe
         #endregion
 
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox inputToSearch;
+        private System.Windows.Forms.Button searchQuote;
     }
 }

@@ -41,7 +41,14 @@ namespace MegaDeskWindownsFilipe
             navigateToForm(mainMenuForm);
         }
 
+
         private void SearchQuotes_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        //Event fired when the searchQuote btn is clicked
+        private void searchQuote_Click(object sender, EventArgs e)
         {
 
         }

@@ -40,7 +40,8 @@ namespace MegaDeskWindownsFilipe
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Consolas", 23F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label7.Location = new System.Drawing.Point(14, 9);
+            this.label7.Location = new System.Drawing.Point(19, 11);
+            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(187, 37);
             this.label7.TabIndex = 16;
@@ -49,16 +50,18 @@ namespace MegaDeskWindownsFilipe
             // quotesGrid
             // 
             this.quotesGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.quotesGrid.Location = new System.Drawing.Point(12, 49);
+            this.quotesGrid.Location = new System.Drawing.Point(16, 60);
+            this.quotesGrid.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.quotesGrid.Name = "quotesGrid";
-            this.quotesGrid.Size = new System.Drawing.Size(576, 310);
+            this.quotesGrid.Size = new System.Drawing.Size(768, 382);
             this.quotesGrid.TabIndex = 17;
             // 
             // btnDeleteQuotes
             // 
-            this.btnDeleteQuotes.Location = new System.Drawing.Point(466, 368);
+            this.btnDeleteQuotes.Location = new System.Drawing.Point(621, 453);
+            this.btnDeleteQuotes.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnDeleteQuotes.Name = "btnDeleteQuotes";
-            this.btnDeleteQuotes.Size = new System.Drawing.Size(122, 34);
+            this.btnDeleteQuotes.Size = new System.Drawing.Size(163, 42);
             this.btnDeleteQuotes.TabIndex = 18;
             this.btnDeleteQuotes.Text = "Delete All Quotes";
             this.btnDeleteQuotes.UseVisualStyleBackColor = true;
@@ -66,15 +69,16 @@ namespace MegaDeskWindownsFilipe
             // 
             // ViewAllQuotes
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(600, 411);
+            this.ClientSize = new System.Drawing.Size(800, 506);
             this.Controls.Add(this.btnDeleteQuotes);
             this.Controls.Add(this.quotesGrid);
             this.Controls.Add(this.label7);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.MaximizeBox = false;
-            this.MaximumSize = new System.Drawing.Size(616, 450);
-            this.MinimumSize = new System.Drawing.Size(616, 450);
+            this.MaximumSize = new System.Drawing.Size(816, 545);
+            this.MinimumSize = new System.Drawing.Size(816, 545);
             this.Name = "ViewAllQuotes";
             this.Text = "View All Quotes";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.ViewAllQuotes_FormClosing);
