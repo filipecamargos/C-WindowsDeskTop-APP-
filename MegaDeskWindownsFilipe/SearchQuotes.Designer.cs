@@ -48,7 +48,7 @@ namespace MegaDeskWindownsFilipe
             // 
             // inputToSearch
             // 
-            this.inputToSearch.Location = new System.Drawing.Point(172, 61);
+            this.inputToSearch.Location = new System.Drawing.Point(172, 65);
             this.inputToSearch.Name = "inputToSearch";
             this.inputToSearch.Size = new System.Drawing.Size(297, 22);
             this.inputToSearch.TabIndex = 18;
@@ -58,10 +58,10 @@ namespace MegaDeskWindownsFilipe
             // 
             this.searchQuote.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.searchQuote.Enabled = false;
-            this.searchQuote.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.searchQuote.Location = new System.Drawing.Point(475, 60);
+            this.searchQuote.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.searchQuote.Location = new System.Drawing.Point(475, 62);
             this.searchQuote.Name = "searchQuote";
-            this.searchQuote.Size = new System.Drawing.Size(72, 24);
+            this.searchQuote.Size = new System.Drawing.Size(102, 29);
             this.searchQuote.TabIndex = 19;
             this.searchQuote.Text = "Search";
             this.searchQuote.UseVisualStyleBackColor = false;
