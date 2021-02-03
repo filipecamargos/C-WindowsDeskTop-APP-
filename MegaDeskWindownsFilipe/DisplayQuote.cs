@@ -49,7 +49,7 @@ namespace MegaDeskWindownsFilipe
             depthFinal.Text = quote.Desk.Depth.ToString();
             drawersFinal.Text = quote.Desk.NumberOfDrawers.ToString();
             materialFinal.Text = quote.Desk.SurfaceMaterial.ToString();
-            total.Text = quote.QuotePrice.ToString();
+            total.Text = "$ " + quote.QuotePrice.ToString();
         }
 
         private void cancel_Click(object sender, EventArgs e)
