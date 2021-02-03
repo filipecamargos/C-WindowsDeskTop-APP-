@@ -19,6 +19,7 @@ namespace MegaDeskWindownsFilipe
         public ViewAllQuotes(in Form mainMenuForm)
         {
             InitializeComponent();
+            this.StartPosition = FormStartPosition.Manual;
             this.mainMenuForm = mainMenuForm;
         }
 
