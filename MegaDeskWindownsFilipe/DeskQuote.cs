@@ -37,8 +37,6 @@ namespace MegaDeskWindownsFilipe
                 { "3 day", Shipping.Rush7Days }
             };
 
-
-
         public string CustomerName { get; set; }
         public Shipping Shipping { get; set; }
         public Desk Desk { get; set; }
@@ -62,7 +60,7 @@ namespace MegaDeskWindownsFilipe
             QuoteDate = date;
         }
 
-        public void GetQuotePrice()
+        public void CalculateQuotePrice()
         {
             decimal basePrice = BASE_PRICE;
 
