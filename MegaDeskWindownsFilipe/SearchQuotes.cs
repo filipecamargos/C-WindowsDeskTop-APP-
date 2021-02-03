@@ -63,6 +63,7 @@ namespace MegaDeskWindownsFilipe
         //Event fired when the searchQuote btn is clicked
         private void searchQuote_Click(object sender, EventArgs e)
         {
+            this.quoteToBeSearched = inputToSearch.Text;
 
         }
     }
