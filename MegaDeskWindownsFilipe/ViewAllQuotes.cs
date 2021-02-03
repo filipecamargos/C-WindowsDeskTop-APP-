@@ -12,6 +12,10 @@ using Newtonsoft.Json;
 
 namespace MegaDeskWindownsFilipe
 {
+    /// <summary>
+    /// This class is responsible for allowing the user 
+    /// to view all quotes in the system
+    /// </summary>
     public partial class ViewAllQuotes : Form
     {
         private Form mainMenuForm;
