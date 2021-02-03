@@ -62,6 +62,13 @@ namespace MegaDeskWindownsFilipe
             QuoteDate = date;
         }
 
+        public decimal GetQuotePrice()
+        {
+            decimal basePrice = BASE_PRICE;
+
+            return basePrice + getDrawersPrice() + getSurfaceAreaPrice()
+                   + getMaterialPrice() + getShippingPrice();
+        }
 
         private decimal getDrawersPrice()
         {
@@ -92,15 +99,6 @@ namespace MegaDeskWindownsFilipe
                     return 0;
             }
         }
-
-        public decimal GetQuotePrice()
-        {
-            decimal basePrice = BASE_PRICE;
-            
-            return basePrice + getDrawersPrice() + getSurfaceAreaPrice()
-                   + getMaterialPrice() + getShippingPrice();
-        }
-
 
         private decimal getShippingPrice()
         {
