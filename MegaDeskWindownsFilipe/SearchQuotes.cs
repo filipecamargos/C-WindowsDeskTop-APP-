@@ -20,6 +20,11 @@ namespace MegaDeskWindownsFilipe
             this.mainMenuForm = mainMenuForm;
         }
 
+        /// <summary>
+        /// Give the appearance of navigation by hiding the current form and
+        /// showing the supplied form
+        /// </summary>
+        /// <param name="form"></param>
         private void navigateToForm(Form form)
         {
             form.Location = this.Location;
