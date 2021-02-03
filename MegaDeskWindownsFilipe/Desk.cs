@@ -104,9 +104,6 @@ namespace MegaDeskWindownsFilipe
             this.depth = depth;
             this.numberOfDrawers = numberOfDrawers;
             this.surfaceMaterial = surfaceMaterial;
-
-            Console.WriteLine("Desk numberOfDrawers: " + this.numberOfDrawers);
-            Console.WriteLine("Desk NumberOfDrawers: " + this.NumberOfDrawers);
         }
     }
 }
