@@ -78,6 +78,7 @@ namespace MegaDeskWindownsFilipe
         private void searchQuoteMethod()
         {
 
+
         }
 
         /// <summary>

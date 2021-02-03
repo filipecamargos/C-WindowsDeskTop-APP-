@@ -21,6 +21,7 @@ namespace MegaDeskWindownsFilipe
         //Variable to hold a reference to the Menu
         private Form mainMenuForm;
 
+        //Initilize the form
         public ViewAllQuotes(in Form mainMenuForm)
         {
             InitializeComponent();
@@ -28,6 +29,11 @@ namespace MegaDeskWindownsFilipe
             this.mainMenuForm = mainMenuForm;
         }
 
+        /// <summary>
+        /// Give the appearance of navigation by hiding the current form and
+        /// showing the supplied form
+        /// </summary>
+        /// <param name="form"></param>
         private void navigateToForm(Form form)
         {
             form.Location = this.Location;
@@ -35,11 +41,13 @@ namespace MegaDeskWindownsFilipe
             form.Show();
         }
 
+        //Handle the closing the form
         private void ViewAllQuotes_FormClosing(object sender, FormClosingEventArgs e)
         {
             navigateToForm(mainMenuForm);
         }
 
+        //Load the quotes
         private void ViewAllQuotes_Load(object sender, EventArgs e)
         {
             // Read quotes from file into list
@@ -54,6 +62,7 @@ namespace MegaDeskWindownsFilipe
             }
         }
 
+        //Set a nice interface to improve readbility
         private void addQuoteColumnHeaders(ref DataGridView quotesGrid)
         {         
             quotesGrid.ColumnCount = 8;
@@ -137,6 +146,7 @@ namespace MegaDeskWindownsFilipe
             return quotes;
         }
 
+        //Handle the btnDeleteQuotes for the quote deletion
         private void btnDeleteQuotes_Click(object sender, EventArgs e)
         {
             string quotesFilename = @"quotes.json";
