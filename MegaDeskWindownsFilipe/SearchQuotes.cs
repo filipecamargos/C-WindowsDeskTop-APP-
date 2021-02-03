@@ -10,6 +10,10 @@ using System.Windows.Forms;
 
 namespace MegaDeskWindownsFilipe
 {
+    /// <summary>
+    /// This class is responsible for allowing the user 
+    /// to search for a specifc quote 
+    /// </summary>
     public partial class SearchQuotes : Form
     {
         private Form mainMenuForm;
