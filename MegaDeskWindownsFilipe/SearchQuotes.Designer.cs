@@ -52,7 +52,7 @@ namespace MegaDeskWindownsFilipe
             this.comboBox1.Location = new System.Drawing.Point(155, 82);
             this.comboBox1.Margin = new System.Windows.Forms.Padding(4);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(404, 24);
+            this.comboBox1.Size = new System.Drawing.Size(571, 24);
             this.comboBox1.TabIndex = 16;
             // 
             // label2
@@ -71,12 +71,13 @@ namespace MegaDeskWindownsFilipe
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(645, 444);
+            this.ClientSize = new System.Drawing.Size(800, 506);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.label7);
             this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximumSize = new System.Drawing.Size(816, 545);
+            this.MinimumSize = new System.Drawing.Size(816, 545);
             this.Name = "SearchQuotes";
             this.Text = "Search Quotes";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.searchQuotes_FormClose);

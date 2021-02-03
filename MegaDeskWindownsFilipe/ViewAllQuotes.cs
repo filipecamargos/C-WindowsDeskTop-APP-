@@ -18,6 +18,7 @@ namespace MegaDeskWindownsFilipe
     /// </summary>
     public partial class ViewAllQuotes : Form
     {
+        //Variable to hold a reference to the Menu
         private Form mainMenuForm;
 
         public ViewAllQuotes(in Form mainMenuForm)
