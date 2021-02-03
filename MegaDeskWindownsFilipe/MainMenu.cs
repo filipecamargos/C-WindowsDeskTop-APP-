@@ -37,7 +37,7 @@ namespace MegaDeskWindownsFilipe
 
         private void navigateToViewAllQuotes()
         {
-            var viewAllQuotesForm = new ViewAllQuotes();
+            var viewAllQuotesForm = new ViewAllQuotes(this);
             navigateToForm(viewAllQuotesForm);
         }
 
