@@ -90,6 +90,7 @@ namespace MegaDeskWindownsFilipe
             Application.Exit();
         }
 
+        //Empty load reference for when menu loads
         private void MainMenu_Load(object sender, EventArgs e)
         {
 
