@@ -42,8 +42,9 @@ namespace MegaDeskWindownsFilipe
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(600, 412);
+            this.pictureBox1.Size = new System.Drawing.Size(800, 507);
             this.pictureBox1.TabIndex = 4;
             this.pictureBox1.TabStop = false;
             // 
@@ -55,9 +56,10 @@ namespace MegaDeskWindownsFilipe
             this.btnExit.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSlateGray;
             this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnExit.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnExit.Location = new System.Drawing.Point(348, 295);
+            this.btnExit.Location = new System.Drawing.Point(464, 363);
+            this.btnExit.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(223, 60);
+            this.btnExit.Size = new System.Drawing.Size(297, 74);
             this.btnExit.TabIndex = 8;
             this.btnExit.Text = "Exit";
             this.btnExit.UseVisualStyleBackColor = false;
@@ -71,9 +73,10 @@ namespace MegaDeskWindownsFilipe
             this.btnSearchQuotes.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSlateGray;
             this.btnSearchQuotes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSearchQuotes.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSearchQuotes.Location = new System.Drawing.Point(348, 205);
+            this.btnSearchQuotes.Location = new System.Drawing.Point(464, 252);
+            this.btnSearchQuotes.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnSearchQuotes.Name = "btnSearchQuotes";
-            this.btnSearchQuotes.Size = new System.Drawing.Size(223, 60);
+            this.btnSearchQuotes.Size = new System.Drawing.Size(297, 74);
             this.btnSearchQuotes.TabIndex = 7;
             this.btnSearchQuotes.Text = "Search Quotes";
             this.btnSearchQuotes.UseVisualStyleBackColor = false;
@@ -87,9 +90,10 @@ namespace MegaDeskWindownsFilipe
             this.btnViewAllQuotes.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSlateGray;
             this.btnViewAllQuotes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnViewAllQuotes.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnViewAllQuotes.Location = new System.Drawing.Point(348, 115);
+            this.btnViewAllQuotes.Location = new System.Drawing.Point(464, 142);
+            this.btnViewAllQuotes.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnViewAllQuotes.Name = "btnViewAllQuotes";
-            this.btnViewAllQuotes.Size = new System.Drawing.Size(223, 60);
+            this.btnViewAllQuotes.Size = new System.Drawing.Size(297, 74);
             this.btnViewAllQuotes.TabIndex = 6;
             this.btnViewAllQuotes.Text = "View Quotes";
             this.btnViewAllQuotes.UseVisualStyleBackColor = false;
@@ -103,9 +107,10 @@ namespace MegaDeskWindownsFilipe
             this.btnAddNewQuote.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSlateGray;
             this.btnAddNewQuote.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAddNewQuote.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddNewQuote.Location = new System.Drawing.Point(348, 25);
+            this.btnAddNewQuote.Location = new System.Drawing.Point(464, 31);
+            this.btnAddNewQuote.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnAddNewQuote.Name = "btnAddNewQuote";
-            this.btnAddNewQuote.Size = new System.Drawing.Size(223, 60);
+            this.btnAddNewQuote.Size = new System.Drawing.Size(297, 74);
             this.btnAddNewQuote.TabIndex = 5;
             this.btnAddNewQuote.Text = "Add New Quote";
             this.btnAddNewQuote.UseVisualStyleBackColor = false;
@@ -113,17 +118,18 @@ namespace MegaDeskWindownsFilipe
             // 
             // MainMenu
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(600, 411);
+            this.ClientSize = new System.Drawing.Size(800, 506);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.btnSearchQuotes);
             this.Controls.Add(this.btnViewAllQuotes);
             this.Controls.Add(this.btnAddNewQuote);
             this.Controls.Add(this.pictureBox1);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.MaximizeBox = false;
-            this.MaximumSize = new System.Drawing.Size(616, 450);
-            this.MinimumSize = new System.Drawing.Size(616, 450);
+            this.MaximumSize = new System.Drawing.Size(816, 545);
+            this.MinimumSize = new System.Drawing.Size(816, 545);
             this.Name = "MainMenu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MegaDesk App";
