@@ -76,6 +76,7 @@ namespace MegaDeskWindownsFilipe
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.label7);
             this.Margin = new System.Windows.Forms.Padding(4);
+            this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(816, 545);
             this.MinimumSize = new System.Drawing.Size(816, 545);
             this.Name = "SearchQuotes";
