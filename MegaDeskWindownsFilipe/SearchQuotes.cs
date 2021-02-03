@@ -18,6 +18,9 @@ namespace MegaDeskWindownsFilipe
     {
         private Form mainMenuForm;
 
+        //hold the string to be searched
+        private string quoteToBeSearched;
+
         public SearchQuotes(in Form mainMenuForm)
         {
             InitializeComponent();
@@ -45,6 +48,16 @@ namespace MegaDeskWindownsFilipe
         private void SearchQuotes_Load(object sender, EventArgs e)
         {
 
+        }
+
+        //Handle input check in order to allow to show the quote
+        private void quoteToBeSearched_TextChanged(object sender, EventArgs e)
+        {
+            // Disable save quote button if no custome name has been entered
+            if (inputToSearch.Text != "")
+            {
+                searchQuote.Enabled = true;
+            }
         }
 
         //Event fired when the searchQuote btn is clicked

@@ -39,7 +39,7 @@ namespace MegaDeskWindownsFilipe
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Consolas", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label7.Location = new System.Drawing.Point(60, 36);
+            this.label7.Location = new System.Drawing.Point(168, 35);
             this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(208, 23);
@@ -48,16 +48,18 @@ namespace MegaDeskWindownsFilipe
             // 
             // inputToSearch
             // 
-            this.inputToSearch.Location = new System.Drawing.Point(275, 36);
+            this.inputToSearch.Location = new System.Drawing.Point(172, 61);
             this.inputToSearch.Name = "inputToSearch";
             this.inputToSearch.Size = new System.Drawing.Size(297, 22);
             this.inputToSearch.TabIndex = 18;
+            this.inputToSearch.TextChanged += new System.EventHandler(this.quoteToBeSearched_TextChanged);
             // 
             // searchQuote
             // 
             this.searchQuote.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.searchQuote.Enabled = false;
             this.searchQuote.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.searchQuote.Location = new System.Drawing.Point(578, 36);
+            this.searchQuote.Location = new System.Drawing.Point(475, 60);
             this.searchQuote.Name = "searchQuote";
             this.searchQuote.Size = new System.Drawing.Size(72, 24);
             this.searchQuote.TabIndex = 19;
