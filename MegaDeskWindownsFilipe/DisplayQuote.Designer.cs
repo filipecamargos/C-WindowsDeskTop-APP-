@@ -30,200 +30,61 @@ namespace MegaDeskWindownsFilipe
         private void InitializeComponent()
         {
             this.label7 = new System.Windows.Forms.Label();
+            this.date = new System.Windows.Forms.Label();
+            this.quoteDate = new System.Windows.Forms.Label();
+            this.saveQuote = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.finalQuoteName = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
+            this.shippingFinal = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.width_final = new System.Windows.Forms.Label();
-            this.Material_final = new System.Windows.Forms.Label();
-            this.shipping_final = new System.Windows.Forms.Label();
+            this.materialFinal = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.widthFinal = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.depthFinal = new System.Windows.Forms.Label();
-            this.drawers_final = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.drawersFinal = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
             this.total = new System.Windows.Forms.Label();
-            this.date = new System.Windows.Forms.Label();
-            this.quote_date = new System.Windows.Forms.Label();
-            this.saveQuote = new System.Windows.Forms.Button();
+            this.label13 = new System.Windows.Forms.Label();
+            this.cancel = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Consolas", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Font = new System.Drawing.Font("Consolas", 23F);
             this.label7.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label7.Location = new System.Drawing.Point(88, 19);
+            this.label7.Location = new System.Drawing.Point(14, 9);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(131, 23);
+            this.label7.Size = new System.Drawing.Size(204, 37);
             this.label7.TabIndex = 27;
             this.label7.Text = "Final Quote";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(17, 62);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(113, 17);
-            this.label1.TabIndex = 17;
-            this.label1.Text = "Customer Name:";
-            // 
-            // finalQuoteName
-            // 
-            this.finalQuoteName.AutoSize = true;
-            this.finalQuoteName.Font = new System.Drawing.Font("Monotype Corsiva", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.finalQuoteName.Location = new System.Drawing.Point(136, 61);
-            this.finalQuoteName.Name = "finalQuoteName";
-            this.finalQuoteName.Size = new System.Drawing.Size(41, 18);
-            this.finalQuoteName.TabIndex = 30;
-            this.finalQuoteName.Text = "Name";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(17, 112);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(48, 17);
-            this.label2.TabIndex = 31;
-            this.label2.Text = "Width:";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(245, 111);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(50, 17);
-            this.label3.TabIndex = 32;
-            this.label3.Text = "Depth:";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(17, 161);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(58, 17);
-            this.label4.TabIndex = 33;
-            this.label4.Text = "Material";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(17, 206);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(63, 17);
-            this.label5.TabIndex = 34;
-            this.label5.Text = "Shipping";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(245, 161);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(64, 17);
-            this.label6.TabIndex = 35;
-            this.label6.Text = "Drawers:";
-            // 
-            // width_final
-            // 
-            this.width_final.AutoSize = true;
-            this.width_final.Font = new System.Drawing.Font("Monotype Corsiva", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.width_final.Location = new System.Drawing.Point(86, 111);
-            this.width_final.Name = "width_final";
-            this.width_final.Size = new System.Drawing.Size(15, 18);
-            this.width_final.TabIndex = 36;
-            this.width_final.Text = "0";
-            // 
-            // Material_final
-            // 
-            this.Material_final.AutoSize = true;
-            this.Material_final.Font = new System.Drawing.Font("Monotype Corsiva", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Material_final.Location = new System.Drawing.Point(86, 161);
-            this.Material_final.Name = "Material_final";
-            this.Material_final.Size = new System.Drawing.Size(15, 18);
-            this.Material_final.TabIndex = 37;
-            this.Material_final.Text = "x";
-            // 
-            // shipping_final
-            // 
-            this.shipping_final.AutoSize = true;
-            this.shipping_final.Font = new System.Drawing.Font("Monotype Corsiva", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.shipping_final.Location = new System.Drawing.Point(86, 206);
-            this.shipping_final.Name = "shipping_final";
-            this.shipping_final.Size = new System.Drawing.Size(15, 18);
-            this.shipping_final.TabIndex = 38;
-            this.shipping_final.Text = "x";
-            // 
-            // depthFinal
-            // 
-            this.depthFinal.AutoSize = true;
-            this.depthFinal.Font = new System.Drawing.Font("Monotype Corsiva", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.depthFinal.Location = new System.Drawing.Point(320, 112);
-            this.depthFinal.Name = "depthFinal";
-            this.depthFinal.Size = new System.Drawing.Size(15, 18);
-            this.depthFinal.TabIndex = 39;
-            this.depthFinal.Text = "0";
-            // 
-            // drawers_final
-            // 
-            this.drawers_final.AutoSize = true;
-            this.drawers_final.Font = new System.Drawing.Font("Monotype Corsiva", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.drawers_final.Location = new System.Drawing.Point(320, 161);
-            this.drawers_final.Name = "drawers_final";
-            this.drawers_final.Size = new System.Drawing.Size(15, 18);
-            this.drawers_final.TabIndex = 40;
-            this.drawers_final.Text = "x";
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(175, 272);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(44, 17);
-            this.label13.TabIndex = 41;
-            this.label13.Text = "Total:";
-            // 
-            // total
-            // 
-            this.total.AutoSize = true;
-            this.total.Font = new System.Drawing.Font("Monotype Corsiva", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.total.Location = new System.Drawing.Point(221, 272);
-            this.total.Name = "total";
-            this.total.Size = new System.Drawing.Size(15, 18);
-            this.total.TabIndex = 42;
-            this.total.Text = "0";
             // 
             // date
             // 
             this.date.AutoSize = true;
-            this.date.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.date.Location = new System.Drawing.Point(245, 24);
+            this.date.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.date.Location = new System.Drawing.Point(60, 70);
             this.date.Name = "date";
-            this.date.Size = new System.Drawing.Size(42, 17);
+            this.date.Size = new System.Drawing.Size(48, 20);
             this.date.TabIndex = 43;
             this.date.Text = "Date:";
             // 
-            // quote_date
+            // quoteDate
             // 
-            this.quote_date.AutoSize = true;
-            this.quote_date.Font = new System.Drawing.Font("Monotype Corsiva", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.quote_date.Location = new System.Drawing.Point(293, 23);
-            this.quote_date.Name = "quote_date";
-            this.quote_date.Size = new System.Drawing.Size(60, 18);
-            this.quote_date.TabIndex = 44;
-            this.quote_date.Text = "x/x/xxxx";
+            this.quoteDate.AutoSize = true;
+            this.quoteDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.quoteDate.Location = new System.Drawing.Point(114, 70);
+            this.quoteDate.Name = "quoteDate";
+            this.quoteDate.Size = new System.Drawing.Size(90, 26);
+            this.quoteDate.TabIndex = 44;
+            this.quoteDate.Text = "x/x/xxxx";
             // 
             // saveQuote
             // 
             this.saveQuote.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.saveQuote.Location = new System.Drawing.Point(178, 345);
+            this.saveQuote.Location = new System.Drawing.Point(140, 330);
             this.saveQuote.Name = "saveQuote";
             this.saveQuote.Size = new System.Drawing.Size(150, 54);
             this.saveQuote.TabIndex = 45;
@@ -231,21 +92,173 @@ namespace MegaDeskWindownsFilipe
             this.saveQuote.UseVisualStyleBackColor = false;
             this.saveQuote.Click += new System.EventHandler(this.saveQuote_Click);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(60, 120);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(128, 20);
+            this.label1.TabIndex = 17;
+            this.label1.Text = "Customer Name:";
+            // 
+            // finalQuoteName
+            // 
+            this.finalQuoteName.AutoSize = true;
+            this.finalQuoteName.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.finalQuoteName.Location = new System.Drawing.Point(191, 120);
+            this.finalQuoteName.Name = "finalQuoteName";
+            this.finalQuoteName.Size = new System.Drawing.Size(71, 26);
+            this.finalQuoteName.TabIndex = 30;
+            this.finalQuoteName.Text = "Name";
+            // 
+            // shippingFinal
+            // 
+            this.shippingFinal.AutoSize = true;
+            this.shippingFinal.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.shippingFinal.Location = new System.Drawing.Point(137, 170);
+            this.shippingFinal.Name = "shippingFinal";
+            this.shippingFinal.Size = new System.Drawing.Size(23, 26);
+            this.shippingFinal.TabIndex = 38;
+            this.shippingFinal.Text = "x";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(60, 170);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(71, 20);
+            this.label5.TabIndex = 34;
+            this.label5.Text = "Shipping";
+            // 
+            // materialFinal
+            // 
+            this.materialFinal.AutoSize = true;
+            this.materialFinal.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.materialFinal.Location = new System.Drawing.Point(440, 170);
+            this.materialFinal.Name = "materialFinal";
+            this.materialFinal.Size = new System.Drawing.Size(23, 26);
+            this.materialFinal.TabIndex = 37;
+            this.materialFinal.Text = "x";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(370, 220);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(69, 20);
+            this.label4.TabIndex = 33;
+            this.label4.Text = "Material:";
+            // 
+            // widthFinal
+            // 
+            this.widthFinal.AutoSize = true;
+            this.widthFinal.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.widthFinal.Location = new System.Drawing.Point(440, 70);
+            this.widthFinal.Name = "widthFinal";
+            this.widthFinal.Size = new System.Drawing.Size(24, 26);
+            this.widthFinal.TabIndex = 36;
+            this.widthFinal.Text = "0";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(370, 70);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(54, 20);
+            this.label2.TabIndex = 31;
+            this.label2.Text = "Width:";
+            // 
+            // depthFinal
+            // 
+            this.depthFinal.AutoSize = true;
+            this.depthFinal.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.depthFinal.Location = new System.Drawing.Point(440, 120);
+            this.depthFinal.Name = "depthFinal";
+            this.depthFinal.Size = new System.Drawing.Size(24, 26);
+            this.depthFinal.TabIndex = 39;
+            this.depthFinal.Text = "0";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(370, 120);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(57, 20);
+            this.label3.TabIndex = 32;
+            this.label3.Text = "Depth:";
+            // 
+            // drawersFinal
+            // 
+            this.drawersFinal.AutoSize = true;
+            this.drawersFinal.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.drawersFinal.Location = new System.Drawing.Point(440, 220);
+            this.drawersFinal.Name = "drawersFinal";
+            this.drawersFinal.Size = new System.Drawing.Size(23, 26);
+            this.drawersFinal.TabIndex = 40;
+            this.drawersFinal.Text = "x";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(370, 170);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(72, 20);
+            this.label6.TabIndex = 35;
+            this.label6.Text = "Drawers:";
+            // 
+            // total
+            // 
+            this.total.AutoSize = true;
+            this.total.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.total.Location = new System.Drawing.Point(307, 270);
+            this.total.Name = "total";
+            this.total.Size = new System.Drawing.Size(29, 31);
+            this.total.TabIndex = 42;
+            this.total.Text = "0";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Location = new System.Drawing.Point(225, 270);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(65, 26);
+            this.label13.TabIndex = 41;
+            this.label13.Text = "Total:";
+            // 
+            // cancel
+            // 
+            this.cancel.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.cancel.Location = new System.Drawing.Point(326, 330);
+            this.cancel.Name = "cancel";
+            this.cancel.Size = new System.Drawing.Size(150, 54);
+            this.cancel.TabIndex = 46;
+            this.cancel.Text = "Cancel";
+            this.cancel.UseVisualStyleBackColor = false;
+            this.cancel.Click += new System.EventHandler(this.cancel_Click);
+            // 
             // DisplayQuote
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(600, 411);
+            this.Controls.Add(this.cancel);
             this.Controls.Add(this.saveQuote);
-            this.Controls.Add(this.quote_date);
+            this.Controls.Add(this.quoteDate);
             this.Controls.Add(this.date);
             this.Controls.Add(this.total);
             this.Controls.Add(this.label13);
-            this.Controls.Add(this.drawers_final);
+            this.Controls.Add(this.drawersFinal);
             this.Controls.Add(this.depthFinal);
-            this.Controls.Add(this.shipping_final);
-            this.Controls.Add(this.Material_final);
-            this.Controls.Add(this.width_final);
+            this.Controls.Add(this.shippingFinal);
+            this.Controls.Add(this.materialFinal);
+            this.Controls.Add(this.widthFinal);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
@@ -268,22 +281,23 @@ namespace MegaDeskWindownsFilipe
 
         #endregion
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label date;
+        private System.Windows.Forms.Label quoteDate;
+        private System.Windows.Forms.Button saveQuote;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label finalQuoteName;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label shippingFinal;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label width_final;
-        private System.Windows.Forms.Label Material_final;
-        private System.Windows.Forms.Label shipping_final;
+        private System.Windows.Forms.Label materialFinal;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label widthFinal;
+        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label depthFinal;
-        private System.Windows.Forms.Label drawers_final;
-        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label drawersFinal;
+        private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label total;
-        private System.Windows.Forms.Label date;
-        private System.Windows.Forms.Label quote_date;
-        private System.Windows.Forms.Button saveQuote;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Button cancel;
     }
 }

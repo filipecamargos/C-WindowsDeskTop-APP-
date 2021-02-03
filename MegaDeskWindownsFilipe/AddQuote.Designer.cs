@@ -56,7 +56,7 @@ namespace MegaDeskWindownsFilipe
             // closeAddQuote
             // 
             this.closeAddQuote.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.closeAddQuote.Location = new System.Drawing.Point(318, 285);
+            this.closeAddQuote.Location = new System.Drawing.Point(318, 294);
             this.closeAddQuote.Name = "closeAddQuote";
             this.closeAddQuote.Size = new System.Drawing.Size(150, 54);
             this.closeAddQuote.TabIndex = 3;
@@ -230,7 +230,7 @@ namespace MegaDeskWindownsFilipe
             // 
             this.btnShowQuote.BackColor = System.Drawing.SystemColors.ControlDark;
             this.btnShowQuote.Enabled = false;
-            this.btnShowQuote.Location = new System.Drawing.Point(140, 285);
+            this.btnShowQuote.Location = new System.Drawing.Point(140, 294);
             this.btnShowQuote.Name = "btnShowQuote";
             this.btnShowQuote.Size = new System.Drawing.Size(150, 54);
             this.btnShowQuote.TabIndex = 2;
@@ -244,7 +244,7 @@ namespace MegaDeskWindownsFilipe
             this.grpOrderDetails.Controls.Add(this.customerName);
             this.grpOrderDetails.Controls.Add(this.delivery);
             this.grpOrderDetails.Controls.Add(this.label6);
-            this.grpOrderDetails.Location = new System.Drawing.Point(20, 76);
+            this.grpOrderDetails.Location = new System.Drawing.Point(20, 85);
             this.grpOrderDetails.Name = "grpOrderDetails";
             this.grpOrderDetails.Size = new System.Drawing.Size(270, 156);
             this.grpOrderDetails.TabIndex = 0;
@@ -261,7 +261,7 @@ namespace MegaDeskWindownsFilipe
             this.grpDeskDetails.Controls.Add(this.width);
             this.grpDeskDetails.Controls.Add(this.drawers);
             this.grpDeskDetails.Controls.Add(this.depth);
-            this.grpDeskDetails.Location = new System.Drawing.Point(318, 76);
+            this.grpDeskDetails.Location = new System.Drawing.Point(318, 85);
             this.grpDeskDetails.Name = "grpDeskDetails";
             this.grpDeskDetails.Size = new System.Drawing.Size(270, 156);
             this.grpDeskDetails.TabIndex = 1;

@@ -48,11 +48,17 @@ namespace MegaDeskWindownsFilipe
             // populate all the labels
         }
 
+        private void cancel_Click(object sender, EventArgs e)
+        {
+            navigateToForm(previousForm);
+            //this.Close();
+        }
+
         private void saveQuote_Click(object sender, EventArgs e)
         {
             AddQuoteToFile();
             navigateToForm(mainMenu);
-            this.Close();
+            //this.Close();
         }        
 
         /// <summary>
@@ -115,5 +121,6 @@ namespace MegaDeskWindownsFilipe
                 writer.Write(quotesJson);
             }
         }
+
     }
 }
