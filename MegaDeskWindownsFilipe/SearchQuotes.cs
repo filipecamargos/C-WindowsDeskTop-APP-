@@ -16,11 +16,13 @@ namespace MegaDeskWindownsFilipe
     /// </summary>
     public partial class SearchQuotes : Form
     {
+        //Reference to the mainMenuForm to facilitate navigation
         private Form mainMenuForm;
 
         //hold the string to be searched
         private string quoteToBeSearched;
 
+        //Initilize the form
         public SearchQuotes(in Form mainMenuForm)
         {
             InitializeComponent();
@@ -39,12 +41,13 @@ namespace MegaDeskWindownsFilipe
             form.Show();
         }
 
+        //Handles when the form is exited
         private void searchQuotes_FormClose(object sender, FormClosedEventArgs e)
         {
             navigateToForm(mainMenuForm);
         }
 
-
+        //Exectuted as part of the framWork for the form load
         private void SearchQuotes_Load(object sender, EventArgs e)
         {
 
@@ -64,7 +67,6 @@ namespace MegaDeskWindownsFilipe
         private void searchQuote_Click(object sender, EventArgs e)
         {
             this.quoteToBeSearched = inputToSearch.Text;
-
         }
     }
 }
