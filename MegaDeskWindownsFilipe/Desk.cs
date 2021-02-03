@@ -85,7 +85,7 @@ namespace MegaDeskWindownsFilipe
         public int NumberOfDrawers
         {
             get { return numberOfDrawers; }
-            set { }
+            set { numberOfDrawers = value; }
         }
 
         public SurfaceMaterial SurfaceMaterial
