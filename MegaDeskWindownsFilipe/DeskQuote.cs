@@ -41,8 +41,19 @@ namespace MegaDeskWindownsFilipe
         public Shipping Shipping { get; set; }
         public Desk Desk { get; set; }
         public DateTime QuoteDate { get; set; }
-        public decimal QuotePrice { get; set; }
-        
+        public decimal QuotePrice
+        {
+            get
+            {
+                if (quotePrice == -1)
+                    quotePrice = calculateQuotePrice();
+                
+                return quotePrice;
+            }
+            set { }
+        }
+
+        private decimal quotePrice = -1;
 
         public DeskQuote()
         {
@@ -60,11 +71,11 @@ namespace MegaDeskWindownsFilipe
             QuoteDate = date;
         }
 
-        public void CalculateQuotePrice()
+        private decimal calculateQuotePrice()
         {
             decimal basePrice = BASE_PRICE;
 
-            QuotePrice = basePrice + getDrawersPrice() + getSurfaceAreaPrice()
+            return basePrice + getDrawersPrice() + getSurfaceAreaPrice()
                    + getMaterialPrice() + getShippingPrice();
         }
 
