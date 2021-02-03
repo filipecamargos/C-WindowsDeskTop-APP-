@@ -67,6 +67,36 @@ namespace MegaDeskWindownsFilipe
         private void searchQuote_Click(object sender, EventArgs e)
         {
             this.quoteToBeSearched = inputToSearch.Text;
+            searchQuoteMethod();
+            
         }
+
+        /// <summary>
+        /// This method will search for the quote given
+        /// by the user
+        /// </summary>
+        private void searchQuoteMethod()
+        {
+
+        }
+
+        /// <summary>
+        /// This method will read the file and deserialize
+        /// the information needed to get the quotes
+        /// </summary>
+        private void readFile()
+        {
+
+        }
+
+        /// <summary>
+        /// This method will Display the quoted requested by the user
+        /// </summary>
+        private void displayQuoteFound()
+        {
+
+        }
+
+
     }
 }
