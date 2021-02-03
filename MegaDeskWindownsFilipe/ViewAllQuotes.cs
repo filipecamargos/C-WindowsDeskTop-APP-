@@ -41,9 +41,11 @@ namespace MegaDeskWindownsFilipe
             List<DeskQuote> quotes = getQuotesFromFile(quotesFilename);
 
             // Fill Data Grid View
-            addQuoteColumnHeaders(ref quotesGrid);
-            addQuoteRows(ref quotesGrid, in quotes);
-
+            if (quotes.Count > 0)
+            {
+                addQuoteColumnHeaders(ref quotesGrid);
+                addQuoteRows(ref quotesGrid, in quotes);
+            }
         }
 
         private void addQuoteColumnHeaders(ref DataGridView quotesGrid)
@@ -112,21 +114,35 @@ namespace MegaDeskWindownsFilipe
         /// </summary>
         private List<DeskQuote> getQuotesFromFile(in string quotesFile)
         {
+            List<DeskQuote> quotes = new List<DeskQuote>();
+
             //Read from the existing file
             if (File.Exists(quotesFile))
             {
                 using (StreamReader reader = new StreamReader(quotesFile))
                 {
                     //load the quotes to string
-                    string quotes = reader.ReadToEnd();
+                    string quotesString = reader.ReadToEnd();
 
-                    if (quotes.Length > 0)
-                    {
-                        return JsonConvert.DeserializeObject<List<DeskQuote>>(quotes);
-                    }
+                    if (quotesString.Length > 0)
+                        quotes = JsonConvert.DeserializeObject<List<DeskQuote>>(quotesString);                   
                 }
             }
-            return new List<DeskQuote>();
+            return quotes;
         }
+
+        private void btnDeleteQuotes_Click(object sender, EventArgs e)
+        {
+            string quotesFilename = @"quotes.json";
+            if (File.Exists(quotesFilename))
+            {
+                using (StreamWriter writer = new StreamWriter(quotesFilename))
+                {
+                    writer.Write(String.Empty);
+                }
+            }
+        }
+
+
     }
 }
