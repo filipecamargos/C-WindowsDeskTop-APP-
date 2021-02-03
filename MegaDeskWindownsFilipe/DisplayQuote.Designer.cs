@@ -31,10 +31,10 @@ namespace MegaDeskWindownsFilipe
         {
             this.label7 = new System.Windows.Forms.Label();
             this.date = new System.Windows.Forms.Label();
-            this.quoteDate = new System.Windows.Forms.Label();
+            this.dateFinal = new System.Windows.Forms.Label();
             this.saveQuote = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.finalQuoteName = new System.Windows.Forms.Label();
+            this.nameFinal = new System.Windows.Forms.Label();
             this.shippingFinal = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.materialFinal = new System.Windows.Forms.Label();
@@ -71,15 +71,15 @@ namespace MegaDeskWindownsFilipe
             this.date.TabIndex = 43;
             this.date.Text = "Date:";
             // 
-            // quoteDate
+            // dateFinal
             // 
-            this.quoteDate.AutoSize = true;
-            this.quoteDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.quoteDate.Location = new System.Drawing.Point(114, 70);
-            this.quoteDate.Name = "quoteDate";
-            this.quoteDate.Size = new System.Drawing.Size(90, 26);
-            this.quoteDate.TabIndex = 44;
-            this.quoteDate.Text = "x/x/xxxx";
+            this.dateFinal.AutoSize = true;
+            this.dateFinal.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateFinal.Location = new System.Drawing.Point(115, 70);
+            this.dateFinal.Name = "dateFinal";
+            this.dateFinal.Size = new System.Drawing.Size(80, 24);
+            this.dateFinal.TabIndex = 44;
+            this.dateFinal.Text = "x/x/xxxx";
             // 
             // saveQuote
             // 
@@ -102,23 +102,23 @@ namespace MegaDeskWindownsFilipe
             this.label1.TabIndex = 17;
             this.label1.Text = "Customer Name:";
             // 
-            // finalQuoteName
+            // nameFinal
             // 
-            this.finalQuoteName.AutoSize = true;
-            this.finalQuoteName.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.finalQuoteName.Location = new System.Drawing.Point(191, 120);
-            this.finalQuoteName.Name = "finalQuoteName";
-            this.finalQuoteName.Size = new System.Drawing.Size(71, 26);
-            this.finalQuoteName.TabIndex = 30;
-            this.finalQuoteName.Text = "Name";
+            this.nameFinal.AutoSize = true;
+            this.nameFinal.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nameFinal.Location = new System.Drawing.Point(190, 120);
+            this.nameFinal.Name = "nameFinal";
+            this.nameFinal.Size = new System.Drawing.Size(61, 24);
+            this.nameFinal.TabIndex = 30;
+            this.nameFinal.Text = "Name";
             // 
             // shippingFinal
             // 
             this.shippingFinal.AutoSize = true;
-            this.shippingFinal.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.shippingFinal.Location = new System.Drawing.Point(137, 170);
+            this.shippingFinal.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.shippingFinal.Location = new System.Drawing.Point(140, 170);
             this.shippingFinal.Name = "shippingFinal";
-            this.shippingFinal.Size = new System.Drawing.Size(23, 26);
+            this.shippingFinal.Size = new System.Drawing.Size(20, 24);
             this.shippingFinal.TabIndex = 38;
             this.shippingFinal.Text = "x";
             // 
@@ -128,17 +128,17 @@ namespace MegaDeskWindownsFilipe
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(60, 170);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(71, 20);
+            this.label5.Size = new System.Drawing.Size(75, 20);
             this.label5.TabIndex = 34;
-            this.label5.Text = "Shipping";
+            this.label5.Text = "Shipping:";
             // 
             // materialFinal
             // 
             this.materialFinal.AutoSize = true;
-            this.materialFinal.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.materialFinal.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.materialFinal.Location = new System.Drawing.Point(440, 170);
             this.materialFinal.Name = "materialFinal";
-            this.materialFinal.Size = new System.Drawing.Size(23, 26);
+            this.materialFinal.Size = new System.Drawing.Size(20, 24);
             this.materialFinal.TabIndex = 37;
             this.materialFinal.Text = "x";
             // 
@@ -155,10 +155,10 @@ namespace MegaDeskWindownsFilipe
             // widthFinal
             // 
             this.widthFinal.AutoSize = true;
-            this.widthFinal.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.widthFinal.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.widthFinal.Location = new System.Drawing.Point(440, 70);
             this.widthFinal.Name = "widthFinal";
-            this.widthFinal.Size = new System.Drawing.Size(24, 26);
+            this.widthFinal.Size = new System.Drawing.Size(20, 24);
             this.widthFinal.TabIndex = 36;
             this.widthFinal.Text = "0";
             // 
@@ -175,10 +175,10 @@ namespace MegaDeskWindownsFilipe
             // depthFinal
             // 
             this.depthFinal.AutoSize = true;
-            this.depthFinal.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.depthFinal.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.depthFinal.Location = new System.Drawing.Point(440, 120);
             this.depthFinal.Name = "depthFinal";
-            this.depthFinal.Size = new System.Drawing.Size(24, 26);
+            this.depthFinal.Size = new System.Drawing.Size(20, 24);
             this.depthFinal.TabIndex = 39;
             this.depthFinal.Text = "0";
             // 
@@ -195,10 +195,10 @@ namespace MegaDeskWindownsFilipe
             // drawersFinal
             // 
             this.drawersFinal.AutoSize = true;
-            this.drawersFinal.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.drawersFinal.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.drawersFinal.Location = new System.Drawing.Point(440, 220);
             this.drawersFinal.Name = "drawersFinal";
-            this.drawersFinal.Size = new System.Drawing.Size(23, 26);
+            this.drawersFinal.Size = new System.Drawing.Size(20, 24);
             this.drawersFinal.TabIndex = 40;
             this.drawersFinal.Text = "x";
             // 
@@ -235,7 +235,7 @@ namespace MegaDeskWindownsFilipe
             // cancel
             // 
             this.cancel.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.cancel.Location = new System.Drawing.Point(326, 330);
+            this.cancel.Location = new System.Drawing.Point(318, 330);
             this.cancel.Name = "cancel";
             this.cancel.Size = new System.Drawing.Size(150, 54);
             this.cancel.TabIndex = 46;
@@ -250,7 +250,7 @@ namespace MegaDeskWindownsFilipe
             this.ClientSize = new System.Drawing.Size(600, 411);
             this.Controls.Add(this.cancel);
             this.Controls.Add(this.saveQuote);
-            this.Controls.Add(this.quoteDate);
+            this.Controls.Add(this.dateFinal);
             this.Controls.Add(this.date);
             this.Controls.Add(this.total);
             this.Controls.Add(this.label13);
@@ -264,7 +264,7 @@ namespace MegaDeskWindownsFilipe
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.finalQuoteName);
+            this.Controls.Add(this.nameFinal);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label1);
             this.MaximizeBox = false;
@@ -272,7 +272,7 @@ namespace MegaDeskWindownsFilipe
             this.MinimumSize = new System.Drawing.Size(616, 450);
             this.Name = "DisplayQuote";
             this.Text = "Display Quote";
-            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.displayQuote__FormClosed);
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.DisplayQuote_FormClosed);
             this.Load += new System.EventHandler(this.DisplayQuote_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -282,10 +282,10 @@ namespace MegaDeskWindownsFilipe
         #endregion
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label date;
-        private System.Windows.Forms.Label quoteDate;
+        private System.Windows.Forms.Label dateFinal;
         private System.Windows.Forms.Button saveQuote;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label finalQuoteName;
+        private System.Windows.Forms.Label nameFinal;
         private System.Windows.Forms.Label shippingFinal;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label materialFinal;

@@ -13,12 +13,13 @@ namespace MegaDeskWindownsFilipe
     public partial class AddQuote : Form
     {  
         public DeskQuote Quote { get; set; }
-        private Form mainMenu;
+        private Form mainMenuForm;
 
-        public AddQuote(Form mainMenu)
+        public AddQuote(Form mainMenuForm)
         {
             InitializeComponent();
-            this.mainMenu = mainMenu;
+            this.StartPosition = FormStartPosition.Manual;
+            this.mainMenuForm = mainMenuForm;
         }
 
         /// <summary>
@@ -35,13 +36,12 @@ namespace MegaDeskWindownsFilipe
 
         private void navigateToDisplayQuote()
         {
-            var displayQuoteForm = new DisplayQuote(Quote, mainMenu, this);        
+            var displayQuoteForm = new DisplayQuote(Quote, mainMenuForm, this);        
             navigateToForm(displayQuoteForm);            
         }
 
         private void navigateToMainMenu()
-        {
-            var mainMenuForm = (MainMenu)mainMenu;
+        {           
             navigateToForm(mainMenuForm);
         }
 
@@ -53,7 +53,7 @@ namespace MegaDeskWindownsFilipe
         }
 
         private void AddQuote_FormClosed(object sender, FormClosedEventArgs e)
-        {         
+        {
             navigateToMainMenu();
         }
 

@@ -15,15 +15,16 @@ namespace MegaDeskWindownsFilipe
     public partial class DisplayQuote : Form
     {
         private DeskQuote quote;
-        private Form mainMenu;
-        private Form previousForm;
+        private Form mainMenuForm;
+        private Form addQuoteForm;
 
-        public DisplayQuote(DeskQuote quote, Form mainMenu, Form previousForm)
+        public DisplayQuote(DeskQuote quote, Form mainMenuForm, Form addQuoteForm)
         {
             InitializeComponent();
+            this.StartPosition = FormStartPosition.Manual;
             this.quote = quote;
-            this.mainMenu = mainMenu;
-            this.previousForm = previousForm;
+            this.mainMenuForm = mainMenuForm;
+            this.addQuoteForm = addQuoteForm;
         }
 
         /// <summary>
@@ -38,28 +39,30 @@ namespace MegaDeskWindownsFilipe
             form.Show();
         }
 
-        private void displayQuote__FormClosed(object sender, FormClosedEventArgs e)
-        {
-            navigateToForm(mainMenu);         
-        }
-
         private void DisplayQuote_Load(object sender, EventArgs e)
         {
             // populate all the labels
+            dateFinal.Text = quote.QuoteDate.ToString("MMM dd, yyyy");
+            nameFinal.Text = quote.CustomerName;
+            //shippingFinal = quote.Shipping.ToString();
         }
 
         private void cancel_Click(object sender, EventArgs e)
         {
-            navigateToForm(previousForm);
-            //this.Close();
+            this.Close();
         }
 
         private void saveQuote_Click(object sender, EventArgs e)
         {
             AddQuoteToFile();
-            navigateToForm(mainMenu);
-            //this.Close();
-        }        
+            this.Close();
+            addQuoteForm.Close(); // navigates to Main Menu via form close function
+        }
+
+        private void DisplayQuote_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            navigateToForm(addQuoteForm);
+        }
 
         /// <summary>
         /// Handle to save the quote data to the file
@@ -75,7 +78,7 @@ namespace MegaDeskWindownsFilipe
             deskQuotes.Add(quote);
 
             // Save quotes to file
-            saveToFile(quotesFile, deskQuotes);
+            saveQuotesToFile(quotesFile, deskQuotes);
         }
 
         /// <summary>
@@ -110,7 +113,7 @@ namespace MegaDeskWindownsFilipe
         /// Serialize a list of DeskQuotes and write to a file
         /// </summary>
         /// <param name="deskQuotes"></param>
-        private void saveToFile(in string quotesFile, in List<DeskQuote> deskQuotes)
+        private void saveQuotesToFile(in string quotesFile, in List<DeskQuote> deskQuotes)
         {
             using (StreamWriter writer = new StreamWriter(quotesFile))
             {
@@ -121,6 +124,7 @@ namespace MegaDeskWindownsFilipe
                 writer.Write(quotesJson);
             }
         }
+
 
     }
 }

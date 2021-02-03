@@ -24,9 +24,9 @@ namespace MegaDeskWindownsFilipe
         /// <param name="form"></param>
         private void navigateToForm(Form form)
         {
-            this.Hide();         
-            form.Show();
             form.Location = this.Location;
+            this.Hide();         
+            form.Show();           
         }
 
         private void navigateToAddQuote()

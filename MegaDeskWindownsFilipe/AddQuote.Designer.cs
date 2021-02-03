@@ -56,7 +56,7 @@ namespace MegaDeskWindownsFilipe
             // closeAddQuote
             // 
             this.closeAddQuote.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.closeAddQuote.Location = new System.Drawing.Point(318, 294);
+            this.closeAddQuote.Location = new System.Drawing.Point(318, 330);
             this.closeAddQuote.Name = "closeAddQuote";
             this.closeAddQuote.Size = new System.Drawing.Size(150, 54);
             this.closeAddQuote.TabIndex = 3;
@@ -230,7 +230,7 @@ namespace MegaDeskWindownsFilipe
             // 
             this.btnShowQuote.BackColor = System.Drawing.SystemColors.ControlDark;
             this.btnShowQuote.Enabled = false;
-            this.btnShowQuote.Location = new System.Drawing.Point(140, 294);
+            this.btnShowQuote.Location = new System.Drawing.Point(140, 330);
             this.btnShowQuote.Name = "btnShowQuote";
             this.btnShowQuote.Size = new System.Drawing.Size(150, 54);
             this.btnShowQuote.TabIndex = 2;
