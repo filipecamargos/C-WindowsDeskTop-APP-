@@ -81,7 +81,7 @@ namespace MegaDeskWindownsFilipe
         {
             // Read quotes from file into list
             var quotesFilename = @"quotes.json";
-            List<DeskQuote> quotes = getQuotesFromFile(quotesFilename);
+            List<DeskQuote> quotes = FileHelper.GetQuotesFromFile(quotesFilename);
 
             //Find the quote searched by the user
             DeskQuote foundQuote;
@@ -95,35 +95,10 @@ namespace MegaDeskWindownsFilipe
                     displayFoundInfo(true, foundQuote);
                     break;
                 }
-                else
-                {
-                    displayFoundInfo(false, null);
-                }
             }
 
-        }
+            displayFoundInfo(false, null);
 
-        /// <summary>
-        /// Reads and deserializes desk quote objects into a list from the
-        /// supplied file (returns empty list if file does not exist)
-        /// </summary>
-        private List<DeskQuote> getQuotesFromFile(in string quotesFile)
-        {
-            List<DeskQuote> quotes = new List<DeskQuote>();
-
-            //Read from the existing file
-            if (File.Exists(quotesFile))
-            {
-                using (StreamReader reader = new StreamReader(quotesFile))
-                {
-                    //load the quotes to string
-                    string quotesString = reader.ReadToEnd();
-
-                    if (quotesString.Length > 0)
-                        quotes = JsonConvert.DeserializeObject<List<DeskQuote>>(quotesString);
-                }
-            }
-            return quotes;
         }
 
         /// <summary>
