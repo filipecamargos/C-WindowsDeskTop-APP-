@@ -172,5 +172,12 @@ namespace MegaDeskWindownsFilipe
 
             return quoteRow;
         }
+
+        private void clearSearch_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            var searchQuotesForm = new SearchQuotes(mainMenuForm);
+            navigateToForm(searchQuotesForm);
+        }
     }
 }

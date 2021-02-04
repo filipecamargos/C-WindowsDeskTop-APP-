@@ -33,6 +33,7 @@ namespace MegaDeskWindownsFilipe
             this.inputToSearch = new System.Windows.Forms.TextBox();
             this.searchQuote = new System.Windows.Forms.Button();
             this.quotesSearchedGrid = new System.Windows.Forms.DataGridView();
+            this.clearSearch = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.quotesSearchedGrid)).BeginInit();
             this.SuspendLayout();
             // 
@@ -78,11 +79,24 @@ namespace MegaDeskWindownsFilipe
             this.quotesSearchedGrid.Size = new System.Drawing.Size(768, 382);
             this.quotesSearchedGrid.TabIndex = 20;
             // 
+            // clearSearch
+            // 
+            this.clearSearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.clearSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.clearSearch.Location = new System.Drawing.Point(663, 466);
+            this.clearSearch.Name = "clearSearch";
+            this.clearSearch.Size = new System.Drawing.Size(118, 29);
+            this.clearSearch.TabIndex = 21;
+            this.clearSearch.Text = "Clear Search";
+            this.clearSearch.UseVisualStyleBackColor = false;
+            this.clearSearch.Click += new System.EventHandler(this.clearSearch_Click);
+            // 
             // SearchQuotes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 506);
+            this.Controls.Add(this.clearSearch);
             this.Controls.Add(this.quotesSearchedGrid);
             this.Controls.Add(this.searchQuote);
             this.Controls.Add(this.inputToSearch);
@@ -107,5 +121,6 @@ namespace MegaDeskWindownsFilipe
         private System.Windows.Forms.TextBox inputToSearch;
         private System.Windows.Forms.Button searchQuote;
         private System.Windows.Forms.DataGridView quotesSearchedGrid;
+        private System.Windows.Forms.Button clearSearch;
     }
 }
