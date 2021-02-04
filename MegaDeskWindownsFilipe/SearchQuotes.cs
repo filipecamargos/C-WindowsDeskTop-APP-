@@ -72,6 +72,7 @@ namespace MegaDeskWindownsFilipe
         private void searchQuote_Click(object sender, EventArgs e)
         {
             foundQuotes.Clear();
+            quotesSearchedGrid.ColumnCount = 0;
             this.quoteToBeSearched = inputToSearch.Text;
             searchQuoteMethod();
             
@@ -173,10 +174,10 @@ namespace MegaDeskWindownsFilipe
             return quoteRow;
         }
 
+        //Clean will just handle the page back with reference to mainMenu
         private void clearSearch_Click(object sender, EventArgs e)
         {
-            this.Close();
-            var searchQuotesForm = new SearchQuotes(mainMenuForm);
+            var searchQuotesForm = new SearchQuotes(this.mainMenuForm);
             navigateToForm(searchQuotesForm);
         }
     }
