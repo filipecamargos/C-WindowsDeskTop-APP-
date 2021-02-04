@@ -93,7 +93,9 @@ namespace MegaDeskWindownsFilipe
             foreach (var quote in quotes)
             {
                 //Display to the user if found else handle it in the display
-                if(quote.CustomerName.ToLower().Contains(this.quoteToBeSearched.Trim().ToLower()))
+                if(quote.CustomerName.ToLower().Contains(this.quoteToBeSearched.Trim().ToLower())
+                    || quote.Desk.SurfaceMaterial.ToString().ToLower()
+                    .Contains(this.quoteToBeSearched.Trim().ToLower()))
                 {
                     foundQuotes.Add(quote);
                 }
