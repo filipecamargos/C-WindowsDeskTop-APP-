@@ -7,6 +7,9 @@ using System.Threading.Tasks;
 
 namespace MegaDeskWindownsFilipe
 {
+    /// <summary>
+    /// Provide the shipping options
+    /// </summary>
     public enum Shipping
     {
         [Description("14 days (no rush)")]
@@ -22,13 +25,18 @@ namespace MegaDeskWindownsFilipe
         Rush3Days      
     }
 
+    /// <summary>
+    /// DeskQuote class will hold the data and information
+    /// for quote as well the values of it and the Desk type
+    /// </summary>
     public class DeskQuote
     {
+        //Requirement based prices
         private const decimal BASE_PRICE = 200;
         private const decimal DRAWER_PRICE = 50;
         private const decimal MAX_FREE_SURFACE_AREA = 50;
 
-
+        //Creates a dictionary of the rush prices
         public static Dictionary<string, Shipping> shippingDict
             = new Dictionary<string, Shipping> {
                 { "14 day (no rush)", Shipping.NoRush },
@@ -37,10 +45,13 @@ namespace MegaDeskWindownsFilipe
                 { "3 day", Shipping.Rush7Days }
             };
 
+        //DeskQuote properties
         public string CustomerName { get; set; }
         public Shipping Shipping { get; set; }
         public Desk Desk { get; set; }
         public DateTime QuoteDate { get; set; }
+
+
         public decimal QuotePrice
         {
             get
