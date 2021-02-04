@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
+using Newtonsoft.Json;
 
 namespace MegaDeskWindownsFilipe
 {
@@ -77,17 +79,33 @@ namespace MegaDeskWindownsFilipe
         /// </summary>
         private void searchQuoteMethod()
         {
-
+            // Read quotes from file into list
+            var quotesFilename = @"quotes.json";
+            List<DeskQuote> quotes = getQuotesFromFile(quotesFilename);
 
         }
 
         /// <summary>
-        /// This method will read the file and deserialize
-        /// the information needed to get the quotes
+        /// Reads and deserializes desk quote objects into a list from the
+        /// supplied file (returns empty list if file does not exist)
         /// </summary>
-        private void readFile()
+        private List<DeskQuote> getQuotesFromFile(in string quotesFile)
         {
+            List<DeskQuote> quotes = new List<DeskQuote>();
 
+            //Read from the existing file
+            if (File.Exists(quotesFile))
+            {
+                using (StreamReader reader = new StreamReader(quotesFile))
+                {
+                    //load the quotes to string
+                    string quotesString = reader.ReadToEnd();
+
+                    if (quotesString.Length > 0)
+                        quotes = JsonConvert.DeserializeObject<List<DeskQuote>>(quotesString);
+                }
+            }
+            return quotes;
         }
 
         /// <summary>
