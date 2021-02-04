@@ -135,6 +135,7 @@
     <None Include="Resources\Laboratory_table2.png" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="bin\Debug\rushFile.txt.txt" />
     <Content Include="Resources\smallDesk.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

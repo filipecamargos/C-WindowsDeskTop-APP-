@@ -69,6 +69,7 @@ namespace MegaDeskWindownsFilipe
             depthFinal.Text = quote.Desk.Depth.ToString();
             drawersFinal.Text = quote.Desk.NumberOfDrawers.ToString();
             materialFinal.Text = quote.Desk.SurfaceMaterial.ToString();
+            shippingPrice.Text = "$ " + quote.ShippingPrice.ToString();
             total.Text = "$ " + quote.QuotePrice.ToString();
         }
 

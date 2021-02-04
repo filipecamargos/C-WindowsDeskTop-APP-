@@ -48,6 +48,7 @@ namespace MegaDeskWindownsFilipe
         //DeskQuote properties
         public string CustomerName { get; set; }
         public Shipping Shipping { get; set; }
+        public decimal ShippingPrice { get; set; }
         public Desk Desk { get; set; }
         public DateTime QuoteDate { get; set; }
 
@@ -133,7 +134,7 @@ namespace MegaDeskWindownsFilipe
         private decimal getShippingPrice()
         {
             /*  
-            Shipping Price Array Visualization
+            Shipping Price Array Visualization Default Price
 
             |Shipping |     Size of Desk (in^2)           |
             |---------|-----------------------------------|
@@ -147,11 +148,29 @@ namespace MegaDeskWindownsFilipe
                                       { 30, 35, 40 }, 
                                       { 40, 50, 60},
                                       { 60, 70, 80 }};
+
+            //call the methodo to read the file
+            var shippingFilename = @"rushFile.txt";
+            ReadFileHelper.UpdateRushPrices(shippingPrices, shippingFilename);
+
             int rushIndex = (int)Shipping;
             int sizeIndex = (int)Desk.SurfaceArea > 2000 ? 2 : ((int)(Desk.SurfaceArea - 1) / 1000);
-            decimal shippingPrice = shippingPrices[rushIndex, sizeIndex];
-            
-            return shippingPrice;
+            ShippingPrice = shippingPrices[rushIndex, sizeIndex];
+
+            Console.WriteLine(rushIndex);
+            Console.WriteLine(sizeIndex);
+
+            for (int i = 0; i < 4; i++)
+            {
+                for (int j = 0; j < 3; j++)
+                {
+                    Console.WriteLine(shippingPrices[i, j]);
+                }
+            }
+
+
+
+            return ShippingPrice;
         }
     }
 }

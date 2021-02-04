@@ -32,5 +32,30 @@ namespace MegaDeskWindownsFilipe
             }
             return quotes;
         }
+
+        /// <summary>
+        /// Takes the array and the read the prices into it to 
+        /// update that in our program
+        /// </summary>
+        /// <param name="shippingPrices"></param>
+        /// <param name="pricefile"></param>
+        public static void UpdateRushPrices(int[,] shippingPrices, in string pricefile)
+        {
+            //Read from the existing file
+            if (File.Exists(pricefile))
+            {
+                using (StreamReader reader = new StreamReader(pricefile))
+                {
+                     //Read the file into the array
+                    for(int i = 1; i < 4; i ++)
+                    {
+                        for(int j = 0; j < 3; j++)
+                        {
+                            shippingPrices[i, j] = int.Parse(reader.ReadLine());
+                        }
+                    }
+                }
+            }
+        }
     }
 }
