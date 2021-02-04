@@ -31,6 +31,7 @@ namespace MegaDeskWindownsFilipe
         public SearchQuotes(in Form mainMenuForm)
         {
             InitializeComponent();
+            this.StartPosition = FormStartPosition.Manual;
             this.mainMenuForm = mainMenuForm;
         }
 
