@@ -24,6 +24,9 @@ namespace MegaDeskWindownsFilipe
         //hold the string to be searched
         private string quoteToBeSearched;
 
+        //Hold the found quotes
+        List<DeskQuote> foundQuotes = new List<DeskQuote>();
+
         //Initilize the form
         public SearchQuotes(in Form mainMenuForm)
         {
@@ -68,6 +71,7 @@ namespace MegaDeskWindownsFilipe
         //Event fired when the searchQuote btn is clicked
         private void searchQuote_Click(object sender, EventArgs e)
         {
+            foundQuotes.Clear();
             this.quoteToBeSearched = inputToSearch.Text;
             searchQuoteMethod();
             
@@ -83,37 +87,27 @@ namespace MegaDeskWindownsFilipe
             var quotesFilename = @"quotes.json";
             List<DeskQuote> quotes = ReadFileHelper.GetQuotesFromFile(quotesFilename);
 
-            //Holds the a referenc to the quote and a flag if found
-            DeskQuote foundQuote = null;
-            Boolean quoteFoundFlag = false;
-
             //Find the quote searched by the user
             foreach (var quote in quotes)
             {
                 //Display to the user if found else handle it in the display
                 if(quote.CustomerName.ToLower().Contains(this.quoteToBeSearched.Trim().ToLower()))
                 {
-                    foundQuote = quote;
-                    quoteFoundFlag = true;
-                    break;
+                    foundQuotes.Add(quote);
                 }
             }
 
-            displayFoundInfo(quoteFoundFlag, foundQuote);
+            displayFoundInfo();
         }
 
         /// <summary>
         /// This method will Display the quoted requested by the user
         /// </summary>
-        private void displayFoundInfo(Boolean result, DeskQuote quote)
+        private void displayFoundInfo()
         {
-            if (result)
+            foreach (var item in foundQuotes)
             {
-                Console.WriteLine("Found: " + quote.CustomerName);
-            }
-            else
-            {
-                Console.WriteLine("Not Found");
+                Console.WriteLine(item.CustomerName);
             }
         }
     }
