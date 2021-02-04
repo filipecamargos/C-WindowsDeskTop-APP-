@@ -43,11 +43,7 @@ namespace MegaDeskWindownsFilipe
         public Desk Desk { get; set; }
         public DateTime QuoteDate { get; set; }
 
-<<<<<<< HEAD
         //Call the quote price caculation
-=======
- 
->>>>>>> 2802b610b2b2627b900a8823543d5db0e026f733
         public decimal QuotePrice
         {
             get
@@ -141,14 +137,11 @@ namespace MegaDeskWindownsFilipe
             | 5 Day   |    $ 40   |    $ 50   |    $ 60   |
             | 7 Day   |    $ 30   |    $ 35   |    $ 40   |
 */
-            int[,] shippingPrices = { { 0,   0,  0},
-                                      { 30, 35, 40 }, 
-                                      { 40, 50, 60},
-                                      { 60, 70, 80 }};
+            int[,] shippingPrices;
 
             //call the methodo to read the file
             var shippingFilename = @"rushFile.txt";
-            ReadFileHelper.UpdateRushPrices(shippingPrices, shippingFilename);
+            shippingPrices = ReadFileHelper.UpdateRushPrices(shippingFilename);
 
             int rushIndex = (int)Shipping;
             int sizeIndex = (int)Desk.SurfaceArea > 2000 ? 2 : ((int)(Desk.SurfaceArea - 1) / 1000);
@@ -164,8 +157,6 @@ namespace MegaDeskWindownsFilipe
                     Console.WriteLine(shippingPrices[i, j]);
                 }
             }
-
-
 
             return ShippingPrice;
         }

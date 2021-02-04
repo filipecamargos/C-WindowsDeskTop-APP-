@@ -39,8 +39,14 @@ namespace MegaDeskWindownsFilipe
         /// </summary>
         /// <param name="shippingPrices"></param>
         /// <param name="pricefile"></param>
-        public static void UpdateRushPrices(int[,] shippingPrices, in string pricefile)
+        public static int[,] UpdateRushPrices(in string pricefile)
         {
+            //Initialize the array with the default prices
+            int[,] newShippingPrice = { { 0,   0,  0},
+                                      { 30, 35, 40 },
+                                      { 40, 50, 60},
+                                      { 60, 70, 80 }};
+
             //Read from the existing file
             if (File.Exists(pricefile))
             {
@@ -51,11 +57,13 @@ namespace MegaDeskWindownsFilipe
                     {
                         for(int j = 0; j < 3; j++)
                         {
-                            shippingPrices[i, j] = int.Parse(reader.ReadLine());
+                            newShippingPrice[i, j] = int.Parse(reader.ReadLine());
                         }
                     }
                 }
             }
+
+            return newShippingPrice;
         }
     }
 }
