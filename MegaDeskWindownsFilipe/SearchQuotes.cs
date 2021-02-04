@@ -83,22 +83,23 @@ namespace MegaDeskWindownsFilipe
             var quotesFilename = @"quotes.json";
             List<DeskQuote> quotes = FileHelper.GetQuotesFromFile(quotesFilename);
 
-            //Find the quote searched by the user
-            DeskQuote foundQuote;
+            //Holds the a referenc to the quote and a flag if found
+            DeskQuote foundQuote = null;
+            Boolean quoteFoundFlag = false;
 
+            //Find the quote searched by the user
             foreach (var quote in quotes)
             {
                 //Display to the user if found else handle it in the display
                 if(quote.CustomerName.ToLower().Contains(this.quoteToBeSearched.Trim().ToLower()))
                 {
                     foundQuote = quote;
-                    displayFoundInfo(true, foundQuote);
+                    quoteFoundFlag = true;
                     break;
                 }
             }
 
-            displayFoundInfo(false, null);
-
+            displayFoundInfo(quoteFoundFlag, foundQuote);
         }
 
         /// <summary>
