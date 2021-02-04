@@ -72,7 +72,7 @@ namespace MegaDeskWindownsFilipe
             // quotesSearchedGrid
             // 
             this.quotesSearchedGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.quotesSearchedGrid.Location = new System.Drawing.Point(13, 98);
+            this.quotesSearchedGrid.Location = new System.Drawing.Point(13, 77);
             this.quotesSearchedGrid.Margin = new System.Windows.Forms.Padding(4);
             this.quotesSearchedGrid.Name = "quotesSearchedGrid";
             this.quotesSearchedGrid.Size = new System.Drawing.Size(768, 382);
