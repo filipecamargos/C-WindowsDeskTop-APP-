@@ -83,6 +83,24 @@ namespace MegaDeskWindownsFilipe
             var quotesFilename = @"quotes.json";
             List<DeskQuote> quotes = getQuotesFromFile(quotesFilename);
 
+            //Find the quote searched by the user
+            DeskQuote foundQuote;
+
+            foreach (var quote in quotes)
+            {
+                //Display to the user if found else handle it in the display
+                if(quote.CustomerName == this.quoteToBeSearched.Trim())
+                {
+                    foundQuote = quote;
+                    displayFoundInfo(true, foundQuote);
+                    break;
+                }
+                else
+                {
+                    displayFoundInfo(false, null);
+                }
+            }
+
         }
 
         /// <summary>
@@ -111,11 +129,16 @@ namespace MegaDeskWindownsFilipe
         /// <summary>
         /// This method will Display the quoted requested by the user
         /// </summary>
-        private void displayQuoteFound()
+        private void displayFoundInfo(Boolean result, DeskQuote quote)
         {
-
+            if (result)
+            {
+                Console.WriteLine("Found: " + quote.CustomerName);
+            }
+            else
+            {
+                Console.WriteLine("Not Found");
+            }
         }
-
-
     }
 }
