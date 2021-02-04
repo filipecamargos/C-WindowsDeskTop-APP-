@@ -36,26 +36,19 @@ namespace MegaDeskWindownsFilipe
         private const decimal DRAWER_PRICE = 50;
         private const decimal MAX_FREE_SURFACE_AREA = 50;
 
-        //Creates a dictionary of the rush prices
-        public static Dictionary<string, Shipping> shippingDict
-            = new Dictionary<string, Shipping> {
-                { "14 day (no rush)", Shipping.NoRush },
-                { "7 day", Shipping.Rush3Days },
-                { "5 day", Shipping.Rush5Days },
-                { "3 day", Shipping.Rush7Days }
-            };
-
         //DeskQuote properties
         public string CustomerName { get; set; }
         public Shipping Shipping { get; set; }
         public Desk Desk { get; set; }
         public DateTime QuoteDate { get; set; }
 
-
+ 
         public decimal QuotePrice
         {
             get
             {
+                // If quote price has not been set, calculate, set,
+                // and return it
                 if (quotePrice == -1)
                     quotePrice = calculateQuotePrice();
                 
