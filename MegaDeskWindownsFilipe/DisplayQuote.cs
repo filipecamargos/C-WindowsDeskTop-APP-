@@ -100,38 +100,13 @@ namespace MegaDeskWindownsFilipe
             var quotesFile = @"quotes.json";
 
             // Get list of existing quotes (if any)
-            List<DeskQuote> deskQuotes = getQuotesFromFile(quotesFile);
+            List<DeskQuote> deskQuotes = ReadFileHelper.GetQuotesFromFile(quotesFile);
 
             // Add new quote
             deskQuotes.Add(quote);
 
             // Save quotes to file
             saveQuotesToFile(quotesFile, deskQuotes);
-        }
-
-        /// <summary>
-        /// Reads a deserializes desk quote objects into a list from the
-        /// supplied file (returns empty list if file does not exist)
-        /// </summary>
-        /// <param name="quotesFile"></param>
-        /// <returns></returns>
-        private List<DeskQuote> getQuotesFromFile(in string quotesFile)
-        {
-            //Read from the existing file
-            if (File.Exists(quotesFile))
-            {
-                using (StreamReader reader = new StreamReader(quotesFile))
-                {
-                    //load the quotes to string
-                    string quotes = reader.ReadToEnd();                 
-
-                    if (quotes.Length > 0)
-                    {
-                        return JsonConvert.DeserializeObject<List<DeskQuote>>(quotes);
-                    }
-                }
-            }
-            return new List<DeskQuote>();
         }
 
         /// <summary>

@@ -8,7 +8,7 @@ using Newtonsoft.Json;
 
 namespace MegaDeskWindownsFilipe
 {
-    class FileHelper
+    class ReadFileHelper
     {
         /// <summary>
         /// Reads and deserializes desk quote objects into a list from the

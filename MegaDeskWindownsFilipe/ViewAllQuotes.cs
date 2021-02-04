@@ -52,7 +52,7 @@ namespace MegaDeskWindownsFilipe
         {
             // Read quotes from file into list
             var quotesFilename = @"quotes.json";
-            List<DeskQuote> quotes = getQuotesFromFile(quotesFilename);
+            List<DeskQuote> quotes = ReadFileHelper.GetQuotesFromFile(quotesFilename);
 
             // Fill Data Grid View
             if (quotes.Count > 0)
@@ -121,29 +121,6 @@ namespace MegaDeskWindownsFilipe
             quoteRow.Add(quote.Desk.SurfaceMaterial.ToString());
 
             return quoteRow;
-        }
-
-        /// <summary>
-        /// Reads and deserializes desk quote objects into a list from the
-        /// supplied file (returns empty list if file does not exist)
-        /// </summary>
-        private List<DeskQuote> getQuotesFromFile(in string quotesFile)
-        {
-            List<DeskQuote> quotes = new List<DeskQuote>();
-
-            //Read from the existing file
-            if (File.Exists(quotesFile))
-            {
-                using (StreamReader reader = new StreamReader(quotesFile))
-                {
-                    //load the quotes to string
-                    string quotesString = reader.ReadToEnd();
-
-                    if (quotesString.Length > 0)
-                        quotes = JsonConvert.DeserializeObject<List<DeskQuote>>(quotesString);                   
-                }
-            }
-            return quotes;
         }
 
         //Handle the btnDeleteQuotes for the quote deletion

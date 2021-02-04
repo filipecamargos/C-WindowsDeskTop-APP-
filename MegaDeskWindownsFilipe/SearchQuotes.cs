@@ -81,7 +81,7 @@ namespace MegaDeskWindownsFilipe
         {
             // Read quotes from file into list
             var quotesFilename = @"quotes.json";
-            List<DeskQuote> quotes = FileHelper.GetQuotesFromFile(quotesFilename);
+            List<DeskQuote> quotes = ReadFileHelper.GetQuotesFromFile(quotesFilename);
 
             //Holds the a referenc to the quote and a flag if found
             DeskQuote foundQuote = null;
