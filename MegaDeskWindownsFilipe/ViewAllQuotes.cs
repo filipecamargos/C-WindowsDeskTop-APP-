@@ -126,6 +126,7 @@ namespace MegaDeskWindownsFilipe
         //Handle the btnDeleteQuotes for the quote deletion
         private void btnDeleteQuotes_Click(object sender, EventArgs e)
         {
+            //Clear the quotes from the file
             string quotesFilename = @"quotes.json";
             if (File.Exists(quotesFilename))
             {
@@ -135,10 +136,9 @@ namespace MegaDeskWindownsFilipe
                 }
             }
 
+            //Close the page and handles it back providing a nice user experience
             var viewAllquotes = new ViewAllQuotes(this.mainMenuForm);
             navigateToForm(viewAllquotes);
         }
-
-
     }
 }
