@@ -42,18 +42,18 @@ namespace MegaDeskWindownsFilipe
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Consolas", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label7.Location = new System.Drawing.Point(168, 9);
+            this.label7.Location = new System.Drawing.Point(180, 9);
             this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(208, 23);
+            this.label7.Size = new System.Drawing.Size(373, 23);
             this.label7.TabIndex = 15;
-            this.label7.Text = "Search for Quotes:";
+            this.label7.Text = "Search Quotes by Name or Material";
             // 
             // inputToSearch
             // 
-            this.inputToSearch.Location = new System.Drawing.Point(172, 44);
+            this.inputToSearch.Location = new System.Drawing.Point(159, 44);
             this.inputToSearch.Name = "inputToSearch";
-            this.inputToSearch.Size = new System.Drawing.Size(297, 22);
+            this.inputToSearch.Size = new System.Drawing.Size(312, 22);
             this.inputToSearch.TabIndex = 18;
             this.inputToSearch.TextChanged += new System.EventHandler(this.quoteToBeSearched_TextChanged);
             // 
@@ -62,11 +62,11 @@ namespace MegaDeskWindownsFilipe
             this.searchQuote.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.searchQuote.Enabled = false;
             this.searchQuote.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.searchQuote.Location = new System.Drawing.Point(475, 41);
+            this.searchQuote.Location = new System.Drawing.Point(477, 41);
             this.searchQuote.Name = "searchQuote";
-            this.searchQuote.Size = new System.Drawing.Size(102, 29);
+            this.searchQuote.Size = new System.Drawing.Size(200, 29);
             this.searchQuote.TabIndex = 19;
-            this.searchQuote.Text = "Search";
+            this.searchQuote.Text = "Search Quote";
             this.searchQuote.UseVisualStyleBackColor = false;
             this.searchQuote.Click += new System.EventHandler(this.searchQuote_Click);
             // 
