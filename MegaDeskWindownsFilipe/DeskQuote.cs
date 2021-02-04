@@ -127,7 +127,7 @@ namespace MegaDeskWindownsFilipe
                                       { 40, 50, 60},
                                       { 60, 70, 80 }};
             int rushIndex = (int)Shipping;
-            int sizeIndex = (int)(Desk.SurfaceArea - 1) / 1000;
+            int sizeIndex = (int)Desk.SurfaceArea > 2000 ? 3 : ((int)(Desk.SurfaceArea - 1) / 1000);
             decimal shippingPrice = shippingPrices[rushIndex, sizeIndex];
             
             return shippingPrice;
