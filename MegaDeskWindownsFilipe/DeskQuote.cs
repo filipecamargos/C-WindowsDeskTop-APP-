@@ -76,6 +76,7 @@ namespace MegaDeskWindownsFilipe
             Shipping = rushOrderOption;
             Desk = desk;
             QuoteDate = date;
+            ShippingPrice = getShippingPrice();
         }
 
         /// <summary>
@@ -87,7 +88,7 @@ namespace MegaDeskWindownsFilipe
             decimal basePrice = BASE_PRICE;
 
             return basePrice + getDrawersPrice() + getSurfaceAreaPrice()
-                   + getMaterialPrice() + getShippingPrice();
+                   + getMaterialPrice() + ShippingPrice;
         }
 
         //Get the Drawer Price
@@ -145,20 +146,8 @@ namespace MegaDeskWindownsFilipe
 
             int rushIndex = (int)Shipping;
             int sizeIndex = (int)Desk.SurfaceArea > 2000 ? 2 : ((int)(Desk.SurfaceArea - 1) / 1000);
-            ShippingPrice = shippingPrices[rushIndex, sizeIndex];
-
-            Console.WriteLine(rushIndex);
-            Console.WriteLine(sizeIndex);
-
-            for (int i = 0; i < 4; i++)
-            {
-                for (int j = 0; j < 3; j++)
-                {
-                    Console.WriteLine(shippingPrices[i, j]);
-                }
-            }
-
-            return ShippingPrice;
+            
+            return shippingPrices[rushIndex, sizeIndex];
         }
     }
 }

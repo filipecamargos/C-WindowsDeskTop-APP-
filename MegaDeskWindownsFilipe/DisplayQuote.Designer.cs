@@ -57,7 +57,7 @@ namespace MegaDeskWindownsFilipe
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Consolas", 23F);
             this.label7.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label7.Location = new System.Drawing.Point(42, 9);
+            this.label7.Location = new System.Drawing.Point(28, 9);
             this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(204, 37);
@@ -68,7 +68,7 @@ namespace MegaDeskWindownsFilipe
             // 
             this.date.AutoSize = true;
             this.date.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.date.Location = new System.Drawing.Point(45, 86);
+            this.date.Location = new System.Drawing.Point(31, 86);
             this.date.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.date.Name = "date";
             this.date.Size = new System.Drawing.Size(48, 20);
@@ -90,7 +90,7 @@ namespace MegaDeskWindownsFilipe
             // 
             this.saveQuote.BackColor = System.Drawing.SystemColors.ControlDark;
             this.saveQuote.Location = new System.Drawing.Point(187, 406);
-            this.saveQuote.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.saveQuote.Margin = new System.Windows.Forms.Padding(4);
             this.saveQuote.Name = "saveQuote";
             this.saveQuote.Size = new System.Drawing.Size(200, 66);
             this.saveQuote.TabIndex = 45;
@@ -102,7 +102,7 @@ namespace MegaDeskWindownsFilipe
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(45, 145);
+            this.label1.Location = new System.Drawing.Point(31, 145);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(128, 20);
@@ -135,7 +135,7 @@ namespace MegaDeskWindownsFilipe
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(45, 209);
+            this.label5.Location = new System.Drawing.Point(31, 209);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(75, 20);
@@ -256,7 +256,7 @@ namespace MegaDeskWindownsFilipe
             // 
             this.cancel.BackColor = System.Drawing.SystemColors.ControlDark;
             this.cancel.Location = new System.Drawing.Point(424, 406);
-            this.cancel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cancel.Margin = new System.Windows.Forms.Padding(4);
             this.cancel.Name = "cancel";
             this.cancel.Size = new System.Drawing.Size(200, 66);
             this.cancel.TabIndex = 46;
@@ -268,7 +268,7 @@ namespace MegaDeskWindownsFilipe
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(45, 274);
+            this.label8.Location = new System.Drawing.Point(31, 275);
             this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(114, 20);
@@ -312,7 +312,7 @@ namespace MegaDeskWindownsFilipe
             this.Controls.Add(this.nameFinal);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(816, 545);
             this.MinimumSize = new System.Drawing.Size(816, 545);
