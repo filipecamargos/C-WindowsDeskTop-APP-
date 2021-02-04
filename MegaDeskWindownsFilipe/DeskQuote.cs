@@ -51,7 +51,7 @@ namespace MegaDeskWindownsFilipe
         public Desk Desk { get; set; }
         public DateTime QuoteDate { get; set; }
 
-
+        //Call the quote price caculation
         public decimal QuotePrice
         {
             get
@@ -66,14 +66,16 @@ namespace MegaDeskWindownsFilipe
 
         private decimal quotePrice = -1;
 
+        //Default Contructor
         public DeskQuote()
         {
             CustomerName = "anonymous";
             Shipping = Shipping.NoRush;
             Desk = new Desk();
-            QuoteDate = DateTime.Today; // change this to an outrageous date?
+            QuoteDate = DateTime.Today;
         }
 
+        //No Default Contructor to set up values needed
         public DeskQuote(string customerName, Shipping rushOrderOption, Desk desk, DateTime date)
         {
             CustomerName = customerName;
@@ -82,6 +84,10 @@ namespace MegaDeskWindownsFilipe
             QuoteDate = date;
         }
 
+        /// <summary>
+        /// Caculate the price of the Quote
+        /// </summary>
+        /// <returns></returns>
         private decimal calculateQuotePrice()
         {
             decimal basePrice = BASE_PRICE;
@@ -90,16 +96,19 @@ namespace MegaDeskWindownsFilipe
                    + getMaterialPrice() + getShippingPrice();
         }
 
+        //Get the Drawer Price
         private decimal getDrawersPrice()
         {
             return DRAWER_PRICE * Desk.NumberOfDrawers;
         }
 
+        //Get the surface Price
         private decimal getSurfaceAreaPrice()
         {
             return Desk.SurfaceArea > MAX_FREE_SURFACE_AREA ? Desk.SurfaceArea - MAX_FREE_SURFACE_AREA : 0;
         }
 
+        //Get the Material Price
         private decimal getMaterialPrice()
         {
             // Calculate Surface material price
@@ -120,6 +129,7 @@ namespace MegaDeskWindownsFilipe
             }
         }
 
+        //Get the Shipping Price
         private decimal getShippingPrice()
         {
             /*  
