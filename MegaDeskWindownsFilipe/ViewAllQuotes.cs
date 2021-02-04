@@ -134,6 +134,9 @@ namespace MegaDeskWindownsFilipe
                     writer.Write(String.Empty);
                 }
             }
+
+            var viewAllquotes = new ViewAllQuotes(this.mainMenuForm);
+            navigateToForm(viewAllquotes);
         }
 
 
